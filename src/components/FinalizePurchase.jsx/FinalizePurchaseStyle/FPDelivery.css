@@ -1,0 +1,58 @@
+.FPDelivery__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color-gray);
+}
+
+.FPDelivery__container h3 {
+    padding: 1em;
+}
+
+.FPDelivery__alertDelivery {
+    width: 100%;
+    color: var(--text-color-red);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 1em;
+}
+
+.FPDelivery__cardDelivery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7em 1em;
+    cursor: pointer;
+    border-bottom: 1px solid var(--text-color-grayLight);
+}
+
+.FPDelivery__cardDelivery:hover {
+    background-color: rgba(243, 243, 243, 0.692);
+}
+
+.FPDeliveryCardDelivery__selectData {
+    display: flex;
+    gap: 1em;
+    justify-content: start;
+    align-items: center;
+}
+
+.FPDeliveryCardDelivery__selectDataName p {
+    font-weight: 500;
+}
+
+.FPDeliveryCardDelivery__selectDataName span {
+    font-weight: 400;
+}
+
+.FPDeliveryCardDelivery__viewMap {
+    color: var(--text-color-red);
+    font-weight: 400;
+    z-index: 5;
+}
+
+.FPDeliveryCardDelivery__viewMap:hover {
+    text-decoration: underline;
+}

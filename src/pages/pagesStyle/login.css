@@ -1,0 +1,129 @@
+.longin__container {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-color: var(--body-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.longin__section {
+  width: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  padding: 2em 1em;
+  border-radius: 1em;
+  background-color: var(--body-white);
+  border: 1px solid var(--text-color-grayLight);
+  box-shadow: 0px 0px 10px 7px rgb(255 255 255 / 20%);
+}
+
+.longin__section img {
+  width: 10em;
+}
+
+.longin__section h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--text-color-gray);
+}
+
+.login__form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+
+.login__div {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__div label {
+  position: absolute;
+  left: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__div i {
+  color: var(--text-color-gray);
+
+}
+
+.login__div input {
+  width: 100%;
+  font-size: 0.9em;
+  font-weight: 400;
+  border-radius: 0.5em;
+  border: 0.1px solid var(--text-color-grayLight);
+  background-color: var(--body-white);
+  padding: 0.5em;
+  padding-left: 2.5em;
+  color: var(--text-color-gray);
+  box-shadow: 0px 0px 10px 7px rgb(255 255 255 / 20%);
+}
+
+.login__form span {
+  margin-top: -1.3em;
+  text-align: center;
+  color: var(--text-color-red);
+  font-size: 14px;
+}
+
+.login__form button {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--text-color-white);
+  background-color: var(--body-red);
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.login__form button:hover {
+  color: var(--body-white);
+  background-color: var(--body-yeloow);
+  transition: 0.5s;
+}
+
+/* longinSection__article */
+
+.longinSection__article {
+  width: 100%;
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.longinSection__article span {
+  font-weight: 500;
+  color: var(--text-color-gray);
+  font-size: 0.9em;
+}
+
+.longinSection__article p {
+  color: var(--text-color-red);
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.longinSection__article p:hover {
+  font-weight: 600;
+}

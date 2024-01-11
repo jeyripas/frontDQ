@@ -1,0 +1,109 @@
+.myProfile__container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 4em 0 0 0;
+    background-color: var(--body-white);
+    transform: translateX(0%);
+    transition: 0.3s ease;
+}
+
+
+
+.myProfile__sectionOne {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 1em;
+    gap: 1em;
+    background-color: var(--body-black);
+}
+
+.myProfileSectionOne__articleOne {
+    position: relative;
+    width: 150px;
+    height: 150px;
+
+
+}
+
+.myProfileSectionOne__articleOne img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.myProfileSectionOne__articleOne i {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    color: var(--text-color-white);
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+.myProfileSectionOne__articleOne i:hover {
+
+    color: var(--text-color-red);
+}
+
+.myProfileSectionOne__articleTwo {
+    color: var(--text-color-white);
+}
+
+.myProfileSectionOne__articleTwo p {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+/* myProfile__sectionTwo */
+
+.myProfile__sectionTwo {
+    width: 100%;
+    max-width: 1400px;
+    padding: 1em;
+    background-color: var(--body-white);
+}
+
+.myProfile__sectionTwo ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.myProfile__sectionTwo li {
+    width: 40%;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color-gray);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--body-gray);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.myProfile__sectionTwo li:hover {
+    color: var(--text-color-red);
+    border-bottom: 2px solid var(--body-red);
+    transition: 0.3s ease;
+}
+
+/* .myProfile__sectionThree */
+
+.myProfile__sectionThree {
+    position: relative;
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    overflow: hidden;
+}

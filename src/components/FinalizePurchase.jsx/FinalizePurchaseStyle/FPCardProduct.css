@@ -1,0 +1,68 @@
+.FPCardProduct__container {
+    width: 100%;
+    min-height: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+    background-color: var(--body-white);
+    padding: 1em;
+    border-bottom: 1px solid var(--text-color-grayLight);
+}
+
+
+.FPCardProduct__dataProduct {
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 0.5em;
+}
+
+.FPCardProduct__dataProduct img {
+    object-fit: cover;
+    width: 90px;
+    height: 70px;
+
+}
+
+.FPCardProduct__dataProduct ul {
+    width: 100%;
+    color: var(--text-color-gray);
+}
+
+
+/* FPCardProduct__prices */
+.FPCardProduct__pricesDelete {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.FPCardProduct__dataProduct__counter {
+    max-width: 200px;
+    scale: 1.1;
+}
+
+.FPCardProduct__prices {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.FPCardProduct__prices p {
+    font-size: 0.9em;
+    color: var(--text-color-gray);
+}
+
+
+.FPCardProduct__deleteProduct {
+    font-size: 1.5em;
+    cursor: pointer;
+}

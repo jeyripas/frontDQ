@@ -1,0 +1,91 @@
+.FPDataClient__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 2em 0 0;
+}
+
+.FPDataClient__form__div {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color-gray);
+    padding: 0 1.5em;
+}
+
+.FPDataClient__form__label {
+    left: 35px;
+    position: absolute;
+    font-size: 16px;
+    transition: 0.5s ease;
+}
+
+.FPDataClient__form__labelAnimation {
+    top: -13px;
+    background-color: var(--body-white);
+    font-size: 12px;
+    padding: 2px 10px;
+    transition: 0.5s ease;
+}
+
+.FPDataClient__form__div input {
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: 1px solid var(--text-color-grayLight);
+    border-radius: 5px;
+    color: var(--text-color-gray);
+}
+
+/* FPDataClient__acceptTerms */
+
+.FPDataClient__alertAcceptTerms {
+    margin: -1em;
+    color: var(--text-color-red);
+    font-size: 14px;
+    width: 100%;
+    padding-left: 1.5em;
+}
+
+
+.FPDataClient__acceptTerms {
+    width: 100%;
+    padding: 1em 1em 1.5em 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--body-white);
+}
+
+.FPDataClient__acceptTerms__article {
+    display: flex;
+    gap: 0.5em;
+    cursor: pointer;
+    color: var(--text-color-gray);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.FPDataClient__acceptTerms__article a {
+    color: var(--text-color-red);
+}
+
+.FPDataClient__acceptTerms__article a:hover {
+    text-decoration: underline;
+}
+
+.FPDataClient__acceptTerms span {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color-red);
+    cursor: pointer;
+}
+
+.FPDataClient__acceptTerms span:hover {
+    text-decoration: underline;
+}

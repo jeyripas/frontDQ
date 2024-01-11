@@ -1,0 +1,105 @@
+.updateImgProfile__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.577);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4em;
+    gap: 2em;
+    opacity: 1;
+    transition: 0.5s ease
+}
+
+.updateImgProfile__closeContainer {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: 0.5s ease
+}
+
+
+.updateImgProfile__form {
+    width: 300px;
+    margin-top: -4em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border: 1px solid var(--text-color-grayLight);
+    box-shadow: 0 0 10px 1px var(--text-color-grayLight);
+    border-radius: 5px;
+    color: var(--text-color-black);
+    background-color: var(--body-white);
+}
+
+.updateImgProfile__formDiv {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.updateImgProfile__formDiv label {
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.updateImgProfile__formDiv i {
+    font-size: 5em;
+    cursor: pointer;
+}
+
+.updateImgProfile__formDiv i:hover {
+    color: var(--text-color-red);
+}
+
+
+.updateImgProfile__formButton {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.updateImgProfile__formButton button {
+    padding: 0.8em 1em;
+    background-color: var(--body-black);
+    color: var(--text-color-white);
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease
+}
+
+
+
+.updateImgProfile__formButton button:hover {
+    background-color: var(--body-red);
+    transition: 0.3s ease
+}
+
+.crud__button:hover {
+    background-color: var(--body-white) !important;
+    color: var(--text-color-black);
+    border: 1px solid var(--body-black);
+    transition: 0.3s ease
+}
+
+/* updateImgProfile__loader */
+
+.updateImgProfile__loader {
+    color: var(--text-color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.5em;
+}

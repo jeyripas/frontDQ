@@ -1,0 +1,123 @@
+.footer__contianer {
+    position: relative;
+    width: 100%;
+    padding: 90px 45px;
+    background-color: var(--body-blueDark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.footer__divOne {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    gap: 2em;
+}
+
+.footer__divOne section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+}
+
+.footer__divOne h5 {
+    color: var(--text-color-white);
+    font-size: 1.25em;
+}
+
+.footer__contianer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.footer__divOne li {
+    font-size: 0.9em;
+    color: #bcbcbc;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.footer__divOne a {
+    color: #bcbcbc;
+}
+
+.footer__divOne a:hover {
+    color: var(--text-color-white);
+}
+
+/* footer__divOne-sectionThree */
+
+.footer__divOne-sectionThree ul {
+    display: flex;
+    flex-direction: unset;
+    gap: 1.5em;
+
+}
+
+.footer__divOne-sectionThree i {
+    font-size: 1.6em;
+    color: var(--text-color-white);
+}
+
+.footer__divOne-sectionThree i:hover {
+    color: var(--text-color-red);
+}
+
+/* .footer__divTwo */
+.footer__divTwo {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.footer__divTwo hr {
+    width: 100%;
+    border: none;
+    border-top: 2px dotted rgba(242, 246, 247, 0.3);
+}
+
+.footer__divTwo section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__divTwo article {
+    color: var(--text-color-white);
+}
+
+.footer__divTwo a {
+    color: #bcbcbc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.footer__divTwo a:hover {
+    color: var(--text-color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    border-bottom: 1.5px dotted var(--text-color-white);
+}
+
+.footer__divTwo i {
+    color: var(--text-color-red);
+}

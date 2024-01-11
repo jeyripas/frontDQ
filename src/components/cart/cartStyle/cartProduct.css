@@ -1,0 +1,124 @@
+.cartSectionOne__article {
+    width: 100%;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.cartSectionOne__article img {
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cartSectionOne__dataProduct {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 0.5em;
+}
+
+.cartSectionOne__dataProduct h3 {
+    font-size: 14px;
+    color: var(--text-color-gray);
+}
+
+.cartSectionOne__dataProduct ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.cartSectionOne__dataProduct li {
+    font-size: 11.5px;
+    font-weight: 500;
+    color: var(--text-color-gray);
+}
+
+.cartSectionOne__dataProduct__counter {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cartSectionOne__dataProduct__counter i {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    padding: 0 6px;
+    color: gray;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cartSectionOne__dataProduct__counter i:nth-child(1) {
+    border: 1px solid var(--text-color-grayLight);
+    border-right: 0;
+    border-radius: 0.6em 0 0 0.6em;
+}
+
+.cartSectionOne__dataProduct__counter i:nth-child(3) {
+    border: 1px solid var(--text-color-grayLight);
+    border-left: 0;
+    border-radius: 0 0.6em 0.6em 0;
+}
+
+
+
+.cartSectionOne__dataProduct__counter i:hover {
+    color: var(--text-color-white);
+    background-color: var(--body-red);
+    transition: 0.3s ease;
+}
+
+
+
+.cartSectionOne__dataProduct__counter span {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 0.9em;
+    border: 1px solid var(--text-color-grayLight);
+    border-left: 0;
+    border-right: 0;
+    pointer-events: none;
+}
+
+
+
+/* cartSectionOne__priceDeleteProduct */
+
+.cartSectionOne__priceDeleteProduct {
+    position: relative;
+    min-width: 80px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0.2em 0;
+}
+
+.cartSectionOne__priceDeleteProduct p {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-color-gray);
+}
+
+.cartSectionOne__priceDeleteProduct i {
+    font-size: 1.5em;
+    cursor: pointer;
+}

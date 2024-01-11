@@ -1,0 +1,114 @@
+.contacts__container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    gap: 2em;
+}
+
+.contacts__container h1 {
+    width: 100%;
+    background-color: var(--body-black);
+    color: var(--text-color-white);
+    font-size: 18px;
+    padding: 1em;
+}
+
+/* contacts__sectionOne */
+
+.contacts__sectionOne {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.contactsSectionOne__articleOne {
+    position: relative;
+    width: 120px;
+    height: 2px;
+    background-color: var(--text-color-grayLight);
+}
+
+.contactsSectionOne__articleOne span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--body-red);
+}
+
+/* contactsSectionOne__articleTwo */
+
+
+.contactsSectionOne__articleTwo {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactsSectionOne__articleTwo h2 {
+    font-size: 26px;
+    color: var(--text-color-gray);
+}
+
+.contactsSectionOne__articleTwo p {
+    font-size: 18px;
+    color: var(--text-color-gray);
+}
+
+/* contactsSectionOne__articleThree */
+
+.contactsSectionOne__articleThree {
+    margin-top: 1em;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactsSectionOne__articleThree a {
+    width: 374px;
+    height: 226px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-white);
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 2px 2px 0 rgb(9 30 66 / 13%);
+
+}
+
+.contactsSectionOne__articleThree i {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.contactsSectionOne__articleThree h3 {
+    font-size: 18px;
+    color: var(--text-color-gray);
+    font-weight: 500;
+}
+
+.contactsSectionOne__articleThree p {
+    font-size: 14px;
+    text-align: center;
+}
+
+@media(max-width:650px) {
+    .contactsSectionOne__articleThree a {
+        width: 100% !important;
+    }
+}

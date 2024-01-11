@@ -33,12 +33,6 @@ const Header = ({ userData }) => {
           <img src="./logo.svg" alt="logo DonQuezo" />
         </Link>
         <ul className={`header__ul ${openMenu ? '' : 'header__closeUl'}`}>
-          <li>
-            <Link to="/" onClick={onclickCloseMenu}>
-              Inicio
-            </Link>
-          </li>
-
           <li
             className={`header__liSections  ${
               !openSections ? '' : 'header__closeLiSections'

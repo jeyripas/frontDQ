@@ -1,6 +1,6 @@
 {
   "name": "Don Quezo",
-  "short_name": "App",
+  "short_name": "Don Quezo",
   "description": "DON QUEZO. La Felicidad hecha Pizza. Rápido, seguro y cumpliendo todos los protocolos de bioseguridad.",
   "start_url": "./index.html",
   "display": "standalone",

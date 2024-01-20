@@ -68,6 +68,8 @@ const Home = () => {
               />
               <img
                 src={section.sectionIcon}
+                width="64"
+                height="64"
                 alt="pizzas icono Don Quezo"
                 className="home__section__three-articleTwo-icon"
               />

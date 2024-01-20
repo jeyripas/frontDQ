@@ -28,7 +28,7 @@
     color: var(--text-color-gray);
 }
 
-.cartSectionOne__dataProduct ul {
+.cartSectionOne__dataProductDiv {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -36,7 +36,7 @@
     align-items: start;
 }
 
-.cartSectionOne__dataProduct li {
+.cartSectionOne__dataProductDiv p {
     font-size: 11.5px;
     font-weight: 500;
     color: var(--text-color-gray);

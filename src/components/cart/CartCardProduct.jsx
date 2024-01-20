@@ -32,15 +32,15 @@ const CartCardProduct = ({ dataProduct, index }) => {
     <article className="cartSectionOne__article">
       <img src={dataProduct?.product?.productImg} alt="" />
       <div className="cartSectionOne__dataProduct">
-        <ul>
+        <div className="cartSectionOne__dataProductDiv">
           <h3>{dataProduct?.product?.name}</h3>
-          <li>
+          <p>
             {dataProduct?.selectOption?.name}:{dataProduct?.selectOption?.size}
-          </li>
+          </p>
           {dataProduct?.selectExtra?.map((extra, index) => (
-            <li key={index}>{extra.name}</li>
+            <p key={index}>{extra.name}</p>
           ))}
-        </ul>
+        </div>
         <div className="cartSectionOne__dataProduct__counter">
           <i
             className="bx bx-minus"

@@ -71,7 +71,7 @@ const Header = ({ userData }) => {
             </Link>
           </li>
           <li>
-            <a href="tel:+51987407185">
+            <a href="tel:+51987407185" aria-label="Numero de contacto">
               <i className="icon icon-support"></i>
             </a>
           </li>

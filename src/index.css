@@ -5,15 +5,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'boxicons';
-  src: url('https://unpkg.com/boxicons@2.1.4/fonts/boxicons.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-  /* Aquí defines font-display */
-}
-
 * {
   box-sizing: border-box;
 }

@@ -32,9 +32,9 @@ const Footer = () => {
                 href="https://goo.gl/maps/95q99GHCUrj966iVA"
                 className="footer-link"
                 target="_blank"
+                aria-label="Dirreccion de la tienda de  Don Quezo"
               >
-                Dirección: Av. Micaela Bastidas Zn "F" Mz D Lt 5
-                Cieneguilla
+                Dirección: Av. Micaela Bastidas Zn "F" Mz D Lt 5 Cieneguilla
               </a>
             </li>
             <li>
@@ -42,13 +42,18 @@ const Footer = () => {
               <a
                 href="mailto:ventas@donquezo.com"
                 className="footer-link"
+                aria-label="Correo de  Don Quezo"
               >
                 Correo: ventas@donquezo.com
               </a>
             </li>
             <li>
               <i className="icon icon-phone2"></i>
-              <a href="tel:+51987407185" className="footer-link">
+              <a
+                href="tel:+51987407185"
+                className="footer-link"
+                aria-label="Numero de contacto de  Don Quezo"
+              >
                 Teléfono: +51987407185
               </a>
             </li>
@@ -62,6 +67,7 @@ const Footer = () => {
                 href="https://www.facebook.com/donquezopizzas"
                 className="social-link"
                 target="_blank"
+                aria-label="Faccebook   Don Quezo"
               >
                 <i className="icon icon-facebook"></i>
               </a>
@@ -71,6 +77,7 @@ const Footer = () => {
                 href="https://www.instagram.com/donquezo_pizzas/"
                 className="social-link"
                 target="_blank"
+                aria-label="Instagram   Don Quezo"
               >
                 <i className="icon icon-instagram"></i>
               </a>
@@ -80,6 +87,7 @@ const Footer = () => {
                 href="https://www.tiktok.com/@donquezopizzas"
                 className="social-link"
                 target="_blank"
+                aria-label="Tiktok   Don Quezo"
               >
                 <i className="bx bxl-tiktok"></i>
               </a>
@@ -91,7 +99,11 @@ const Footer = () => {
         <hr />
         <section>
           <article>
-            <a href="https://idotcode.com" target="_blank">
+            <a
+              href="https://idotcode.com"
+              target="_blank"
+              aria-label="Visitar pagina del desarrollador de Don Quezo"
+            >
               con
               <i className="bx bxs-heart"></i>
               by IdotCode

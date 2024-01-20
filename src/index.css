@@ -45,6 +45,7 @@ body {
   height: 100vh;
   min-width: 360px;
   font-family: 'Jost', sans-serif;
+  font-display: swap;
   background-color: var(--body-white);
   letter-spacing: 0.1px;
   overflow: hidden;

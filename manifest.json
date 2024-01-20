@@ -1,12 +1,9 @@
 {
   "name": "Don Quezo",
-  "short_name": "Don Quezo",
   "description": "DON QUEZO. La Felicidad hecha Pizza. Rápido, seguro y cumpliendo todos los protocolos de bioseguridad.",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
-  "prefer_related_applications": true,
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "/logo2.png",

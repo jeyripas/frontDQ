@@ -3,7 +3,8 @@
     src: url(../fonts/icomoon.eot?2wqjzd);
     src: url(../fonts/icomoon.eot?2wqjzd#iefix) format('embedded-opentype'), url(../fonts/icomoon.ttf?2wqjzd) format('truetype'), url(../fonts/icomoon.woff?2wqjzd) format('woff'), url(../fonts/icomoon.svg?2wqjzd#iconfont) format('svg');
     font-weight: 400;
-    font-style: normal
+    font-style: normal;
+    font-display: swap;
 }
 
 .icon {

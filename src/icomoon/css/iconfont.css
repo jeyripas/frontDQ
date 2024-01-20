@@ -7,10 +7,12 @@
     url('../fonts/icomoon.svg?2wqjzd#iconfont') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 .icon {
   font-family: 'iconfont' !important;
+  font-display: swap;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

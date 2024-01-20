@@ -30,9 +30,9 @@ const Footer = () => {
               <i className="icon icon-map-marker"></i>
               <a
                 href="https://goo.gl/maps/95q99GHCUrj966iVA"
-                className="footer-link"
+                class="footer-link"
                 target="_blank"
-                aria-label="Dirreccion de la tienda de  Don Quezo"
+                aria-label="Dirección de la tienda de Don Quezo: Av. Micaela Bastidas Zn 'F' Mz D Lt 5 Cieneguilla"
               >
                 Dirección: Av. Micaela Bastidas Zn "F" Mz D Lt 5 Cieneguilla
               </a>

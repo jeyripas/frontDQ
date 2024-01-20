@@ -96,10 +96,10 @@ const Home = () => {
             aria-label="Name"
             onClick={() => setViewWarning(false)}
           ></button>
-          <h5>Aviso</h5>
+          <p>Aviso</p>
           <img src="/banner-aviso-inicio.png" alt="aviso de entrega" />
           <div>
-            <p onClick={() => setViewWarning(false)}>Cerrar</p>
+            <span onClick={() => setViewWarning(false)}>Cerrar</span>
           </div>
         </article>
       </section>

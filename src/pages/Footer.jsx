@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer__contianer">
       <div className="footer__divOne">
         <section className="footer__divOne-sectionOne">
-          <h5>Menu Links</h5>
+          <p>Menu Links</p>
           <ul>
             <li>
               <i className="bx bx-chevron-right"></i>
@@ -24,7 +24,7 @@ const Footer = () => {
           </ul>
         </section>
         <section className="footer__divOne-sectionTwo">
-          <h5>Contacto</h5>
+          <p>Contacto</p>
           <ul>
             <li>
               <i className="icon icon-map-marker"></i>
@@ -60,7 +60,7 @@ const Footer = () => {
           </ul>
         </section>
         <section className="footer__divOne-sectionThree">
-          <h5>Síguenos en:</h5>
+          <p>Síguenos en:</p>
           <ul>
             <li>
               <a

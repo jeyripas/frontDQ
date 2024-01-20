@@ -27,7 +27,7 @@
 
 }
 
-.footer__divOne h5 {
+.footer__divOne p {
     color: var(--text-color-white);
     font-size: 1.25em;
 }

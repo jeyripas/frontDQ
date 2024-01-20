@@ -355,7 +355,7 @@
 }
 
 
-.home__section__four__article h5 {
+.home__section__four__article p {
     font-size: 20px;
     color: var(--text-color-gray);
     font-weight: 500;
@@ -375,7 +375,7 @@
     justify-content: end;
 }
 
-.home__section__four__article p {
+.home__section__four__article span {
     padding: 0.5em 1em;
     color: var(--text-color-white);
     background-color: var(--body-red);

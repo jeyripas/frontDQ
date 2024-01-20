@@ -378,7 +378,7 @@
 .home__section__four__article span {
     padding: 0.5em 1em;
     color: var(--text-color-white);
-    background-color: var(--body-red);
+    background-color: var(--body-black);
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
@@ -386,6 +386,12 @@
     transition: 0.3s ease;
 }
 
+
+.home__section__four__article span:hover {
+
+    background-color: var(--body-red);
+
+}
 
 @media(max-width:650px) {
     .home__section__three-articleTwo a {

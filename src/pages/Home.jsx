@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './pagesStyle/home.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import ScrollToTop from '../hooks/ScrollToTop';
+
 const Home = () => {
   const [allSections, setallSections] = useState();
   const [viewWarning, setViewWarning] = useState(true);
@@ -64,13 +64,11 @@ const Home = () => {
               <img
                 src={section.sectionProductImg}
                 alt="pizzas Don Quezo"
-                loading="lazy"
                 className="home__section__three-articleTwo-imgbackground"
               />
               <img
                 src={section.sectionIcon}
-                alt=""
-                loading="lazy"
+                alt="pizzas icono Don Quezo"
                 className="home__section__three-articleTwo-icon"
               />
               <h3>{section.name}</h3>
@@ -78,7 +76,7 @@ const Home = () => {
           ))}
         </article>
         <article className="home__section__three-articleThree">
-          <img src="/bg-banner.jpg" alt="" />
+          <img src="/bg-banner.jpg" alt="Banner entrega a domicilio" />
           <div>
             <small>ENTREGA A DOMICILIO</small>
             <h2>Don Quezo</h2>
@@ -93,7 +91,11 @@ const Home = () => {
         }`}
       >
         <article className="home__section__four__article">
-          <button onClick={() => setViewWarning(false)}></button>
+          <button
+            id="al"
+            aria-label="Name"
+            onClick={() => setViewWarning(false)}
+          ></button>
           <h5>Aviso</h5>
           <img src="/banner-aviso-inicio.png" alt="aviso de entrega" />
           <div>

@@ -75,7 +75,12 @@ const DeliveryArea = () => {
           ))}
         </article>
         <article className="deliveryArea__sectionTwo__articleTwo">
-          <iframe src={selectLinkMap} width="100%" height="100%"></iframe>
+          <iframe
+            src={selectLinkMap}
+            width="100%"
+            height="100%"
+            title="Delivery Map"
+          ></iframe>
         </article>
       </section>
     </div>

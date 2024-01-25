@@ -35,7 +35,7 @@ const FinalizePurchase = ({ userData }) => {
       delivery: selectDelivery,
       totalPrice: calculateTotal(),
     }));
-  }, [cartData, dataClient, selectDelivery]);
+  }, [cartData, dataClient, selectDelivery, selectSlide]);
 
   const calculatePrice = (product) => {
     const optionPrice = product?.priceDiscount || 0;

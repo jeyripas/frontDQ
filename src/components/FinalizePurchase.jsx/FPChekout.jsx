@@ -18,10 +18,9 @@ const FPChekout = ({ dataPay, selectSlide, setselectSlide, userData }) => {
   useEffect(() => {
     async function setupPaymentForm() {
       const endpoint = 'https://api.micuentaweb.pe';
-      const publicKey =
-        '14730041:testpublickey_FATajW42loV33ie2uXAfvJi3bb4tMitbZ7q9g6Z04kakI';
+      const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
-      const url = 'http://localhost:3031/api/v1/izipay/createPayment';
+      const url = `${import.meta.env.VITE_URL_API}/izipay/createPayment`;
 
       try {
         await axios
@@ -42,7 +41,9 @@ const FPChekout = ({ dataPay, selectSlide, setselectSlide, userData }) => {
 
         await KR.onSubmit(async (paymentData) => {
           const data = { paymentData, dataPay, userData };
-          const urlValidPayment = `http://localhost:3031/api/v1/izipay/validatePayment`;
+          const urlValidPayment = `${
+            import.meta.env.VITE_URL_API
+          }/izipay/validatePayment`;
 
           try {
             const response = await axios.post(urlValidPayment, data);

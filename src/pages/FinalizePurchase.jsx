@@ -4,6 +4,7 @@ import FPCardProduct from '../components/FinalizePurchase.jsx/FPCardProduct';
 import './pagesStyle/finalizePurchase.css';
 import FPDelivery from '../components/FinalizePurchase.jsx/FPDelivery';
 import FPDataClient from '../components/FinalizePurchase.jsx/FPDataClient';
+import FPChekout from '../components/FinalizePurchase.jsx/FPChekout';
 
 const FinalizePurchase = ({ userData }) => {
   const cartData = useSelector((state) => state.cart);
@@ -136,7 +137,12 @@ const FinalizePurchase = ({ userData }) => {
           setdataClient={setdataClient}
           dataPay={dataPay}
         />
-        {/* <FPChekout /> */}
+        <FPChekout
+          dataPay={dataPay}
+          userData={userData}
+          selectSlide={selectSlide}
+          setselectSlide={setselectSlide}
+        />
       </div>
     </div>
   );

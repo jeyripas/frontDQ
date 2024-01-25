@@ -25,7 +25,6 @@ const UpdateImgProfile = ({ userData, setopenUpdateImg, openUpdateImg }) => {
     axios
       .patch(url, formData, config)
       .then((res) => {
-        console.log(res);
         setopenUpdateImg(false);
         setloading(false);
         window.location.reload();

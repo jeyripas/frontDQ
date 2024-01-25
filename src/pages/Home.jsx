@@ -41,7 +41,12 @@ const Home = () => {
     <div className="home__container">
       <section className="home__section__one">
         <span></span>
-        <img src="./bg.svg" alt="fondo home Don Quezo" />
+        {window.innerWidth > 800 ? (
+          <img src="./portada.jpg" alt="fondo home Don Quezo" />
+        ) : (
+          <img src="./portadaMobil.jpg" alt="fondo home Don Quezo" />
+        )}
+
         <h1>DON QUEZO</h1>
         <p>
           La Felicidad hecha Pizza. Rápido, seguro y cumpliendo todos los
@@ -78,7 +83,8 @@ const Home = () => {
           ))}
         </article>
         <article className="home__section__three-articleThree">
-          <img src="/bg-banner.jpg" alt="Banner entrega a domicilio" />
+          {' '}
+          <img src="/informacion.png" alt="Banner entrega a domicilio" />
           <div>
             <small>ENTREGA A DOMICILIO</small>
             <h2>Don Quezo</h2>

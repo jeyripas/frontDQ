@@ -1,0 +1,32 @@
+.FPCheckout__cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+.FPCheckout__cards h3 {
+    color: var(--text-color-gray);
+}
+
+.FPCheckout__cards ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.FPCheckout__cards li {
+    width: 3em;
+}
+
+.FPCheckout__buttonBack {
+    width: 300px;
+}
+
+.kr-payment-button {
+    background-color: var(--body-red) !important;
+    border: 0 !important;
+}

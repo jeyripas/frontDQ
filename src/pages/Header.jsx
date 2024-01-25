@@ -37,8 +37,8 @@ const Header = ({ userData }) => {
             className={`header__liSections  ${
               !openSections ? '' : 'header__closeLiSections'
             }`}
-            onMouseEnter={() => setopenSections(true)}
-            onMouseLeave={() => setopenSections(false)}
+            // onMouseEnter={() => setopenSections(true)}
+            // onMouseLeave={() => setopenSections(false)}
             onClick={() => setopenSections(!openSections)}
           >
             <p>
@@ -85,8 +85,8 @@ const Header = ({ userData }) => {
         </article>
         <article
           className="header__profile"
-          onMouseEnter={() => setopenPerfil(true)}
-          onMouseLeave={() => setopenPerfil(false)}
+          // onMouseEnter={() => setopenPerfil(true)}
+          // onMouseLeave={() => setopenPerfil(false)}
           onClick={() => setopenPerfil(!openPerfil)}
         >
           {!userData ? (

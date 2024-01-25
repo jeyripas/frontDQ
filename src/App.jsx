@@ -21,7 +21,6 @@ import ScrollToTop from './hooks/ScrollToTop';
 function App() {
   const userDataJSON = localStorage.getItem('userData');
   const userStorage = JSON.parse(userDataJSON);
-  const [userData, setuserData] = useState();
 
   useEffect(() => {
     const url = `${import.meta.env.VITE_URL_API}/client/${
@@ -32,7 +31,8 @@ function App() {
       axios
         .get(url)
         .then((res) => {
-          setuserData(res.data.client);
+          const userDataJSON = JSON.stringify(res.data);
+          localStorage.setItem('userData', userDataJSON);
         })
 
         .catch((err) => {
@@ -45,24 +45,24 @@ function App() {
   return (
     <div className="app_container">
       <ScrollToTop />
-      <Header userData={userData} />
+      <Header userData={userStorage?.client} />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/seccion/:id" element={<Products />} />
         <Route path="/zonas-de-reparto" element={<DeliveryArea />} />
-        <Route path="/log-in" element={<Login setuserData={setuserData} />} />
+        <Route path="/log-in" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/contacts" element={<Contacts />} />
 
         <Route element={<ProtectedRoutes />}>
           <Route
             path="/finalizar-compra"
-            element={<FinalizePurchase userData={userData} />}
+            element={<FinalizePurchase userData={userStorage?.client} />}
           />
           <Route
             path="/mi-perfil"
-            element={<MyProfile userData={userData} />}
+            element={<MyProfile userData={userStorage?.client} />}
           />
           <Route path="/thank-you" element={<ThankYou />} />
         </Route>

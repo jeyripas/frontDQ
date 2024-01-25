@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import './FinalizePurchaseStyle/FPDataClient.css';
-import axios from 'axios';
-import config from '../../utils/getToken';
-import { clearCart } from '../../store/Slices/Cart.slice';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
@@ -38,19 +35,8 @@ const FPDataClient = ({
 
   const postOrden = () => {
     if (acceptTerms) {
-      const url = `${import.meta.env.VITE_URL_API}/client-order/${userData.id}`;
-
-      axios
-        .post(url, dataPay, config)
-        .then((res) => {
-          const userDataJSON = JSON.stringify(dataPay);
-          localStorage.setItem('dataPay', userDataJSON);
-          dispatch(clearCart());
-          navigate('/thank-you');
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+      setselectSlide('chekout');
+      setalertAceepTerms();
     } else {
       setalertAceepTerms(
         'Para continuar por favor acepte los Términos y Condiciones'
@@ -218,7 +204,9 @@ const FPDataClient = ({
           className="finalizePurchase__sectionOne__continue"
           onMouseEnter={() => setButtonAnimation(true)}
           onMouseLeave={() => setButtonAnimation(false)}
-          onClick={() => postOrden()} // Change this line
+          onClick={() => {
+            postOrden();
+          }} // Change this line
         >
           <p style={buttonAnimation ? { transform: 'translatex(-100%)' } : {}}>
             Pagar

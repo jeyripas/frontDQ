@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './pagesStyle/login.css';
 import { useState } from 'react';
 
-const Login = ({ setuserData }) => {
+const Login = ({}) => {
   const { register, handleSubmit, reset } = useForm();
   const navigate = useNavigate();
   const [error, seterror] = useState();
@@ -18,7 +18,7 @@ const Login = ({ setuserData }) => {
         localStorage.setItem('token', res.data.token);
         const userDataJSON = JSON.stringify(res.data);
         localStorage.setItem('userData', userDataJSON);
-        setuserData(res.data);
+
         navigate('/');
         window.location.reload();
       })

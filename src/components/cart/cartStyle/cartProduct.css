@@ -26,6 +26,7 @@
 .cartSectionOne__dataProduct h3 {
     font-size: 14px;
     color: var(--text-color-gray);
+    font-weight: 400;
 }
 
 .cartSectionOne__dataProductDiv {
@@ -37,8 +38,8 @@
 }
 
 .cartSectionOne__dataProductDiv p {
-    font-size: 11.5px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 400;
     color: var(--text-color-gray);
 }
 
@@ -114,7 +115,7 @@
 
 .cartSectionOne__priceDeleteProduct p {
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--text-color-gray);
 }
 

@@ -41,7 +41,7 @@
 
 .optionsProduct__sectionAticleOne h3 {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 
@@ -89,7 +89,7 @@
     display: flex;
     align-items: center;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--text-color-gray);
     gap: 0.5em;
 }
@@ -158,7 +158,7 @@
     border: 1.5px solid var(--body-black);
     border-radius: 0.3em;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,7 +176,7 @@
     width: 60%;
     padding: 0.8em;
     border-radius: 0.3em;
-    font-weight: 600;
+    font-weight: 400;
     transition: 0.3s ease;
     cursor: pointer;
     background-color: var(--body-red);

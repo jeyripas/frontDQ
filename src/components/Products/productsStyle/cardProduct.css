@@ -65,14 +65,14 @@
 
 .cardProduct__articleOne h3 {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .cardProduct__articleOne small {
     width: 75%;
     margin-top: -0.2em;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .cardProduct__articleOne p {
@@ -144,7 +144,7 @@
     align-items: center;
     gap: 0.5em;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--text-color-gray);
     cursor: pointer;
     transition: 0.3s ease;
@@ -168,8 +168,12 @@
     gap: 0.5em !important;
     justify-content: center;
     align-items: start;
+
 }
 
+.cardProduct__articleTwo__price p {
+    font-size: 14px;
+}
 
 .cardProduct__articleTwo__price:hover {
     color: var(--text-color-gray) !important;
@@ -180,6 +184,7 @@
     font-family: "iconfont";
     font-size: 1.4em;
     padding-right: 0.3em;
+
 }
 
 

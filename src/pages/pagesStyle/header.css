@@ -276,6 +276,11 @@
         transition: 0.3s ease;
     }
 
+    .header__liSections p {
+        z-index: 2;
+        font-size: 1.3em;
+    }
+
     .header__closeLiSections {
         height: auto !important;
         transition: 0.3s ease;
@@ -283,7 +288,7 @@
 
     .header__liSections__div {
         position: relative;
-        top: 0 !important;
+        top: 0.5em !important;
         padding: 0;
         width: 100% !important;
         border: none;

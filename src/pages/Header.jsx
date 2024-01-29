@@ -42,7 +42,7 @@ const Header = ({ userData }) => {
             onClick={() => setopenSections(!openSections)}
           >
             <p>
-              Secciones <i className="bx bx-chevron-down"></i>
+              Menú <i className="bx bx-chevron-down"></i>
             </p>
             <div
               className={`header__liSections__div  ${

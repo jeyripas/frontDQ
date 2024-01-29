@@ -47,11 +47,6 @@ const Home = () => {
           <img src="./portadaMobil.jpg" alt="fondo home Don Quezo" />
         )}
 
-        <h1>DON QUEZO</h1>
-        <p>
-          La Felicidad hecha Pizza. Rápido, seguro y cumpliendo todos los
-          protocolos de bioseguridad..
-        </p>
         <Link to="/">Pide aquí</Link>
       </section>
       <section className="home__section__two" onClick={clickTop}></section>
@@ -86,9 +81,6 @@ const Home = () => {
           {' '}
           <img src="/informacion.png" alt="Banner entrega a domicilio" />
           <div>
-            <small>ENTREGA A DOMICILIO</small>
-            <h2>Don Quezo</h2>
-            <p>Te quitamos las dudas. Entra aquí:</p>
             <Link>Preguntas más frecuentes</Link>
           </div>
         </article>

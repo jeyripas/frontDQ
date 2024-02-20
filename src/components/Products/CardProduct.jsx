@@ -11,6 +11,8 @@ const CardProduct = ({ product, selectCategory, filterTextProduct }) => {
   const [selectOption, setselectOption] = useState(null);
   const [selectDefaultOption, setselectDefaultOption] = useState(null);
   const [selectExta, setselectExtra] = useState([]);
+  const [selectPizza, setSelectPizza] = useState([]);
+  const [selectDrink, setSelectDrink] = useState(null);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -51,15 +53,18 @@ const CardProduct = ({ product, selectCategory, filterTextProduct }) => {
       product: product,
       selectExtra: selectExta,
       selectOption: selectOption,
+      selectPizza: selectPizza,
+      selectDrink: selectDrink,
       priceDiscount,
       counter: 1,
     };
 
     if (selectOption) {
       dispatch(setCart([cartItem]));
+    } else {
+      setselectExtra([]);
+      setSelectPizza([]);
     }
-
-    setselectExtra([]);
   };
 
   const priceDiscount =
@@ -144,7 +149,6 @@ const CardProduct = ({ product, selectCategory, filterTextProduct }) => {
         </ul>
       </article>
       <OptionsProduct
-        productOptions={productOptions}
         openOption={openOption}
         setopenOption={setopenOption}
         product={product}
@@ -153,6 +157,10 @@ const CardProduct = ({ product, selectCategory, filterTextProduct }) => {
         setselectExtra={setselectExtra}
         selectExta={selectExta}
         handleAddToCart={handleAddToCart}
+        setSelectPizza={setSelectPizza}
+        selectPizza={selectPizza}
+        setSelectDrink={setSelectDrink}
+        selectDrink={selectDrink}
       />
     </div>
   );

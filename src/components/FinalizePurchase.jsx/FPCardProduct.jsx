@@ -44,6 +44,10 @@ const FPCardProduct = ({ dataProduct, index }) => {
           <li>
             {dataProduct?.selectOption?.name}:{dataProduct?.selectOption?.size}
           </li>
+          {dataProduct?.selectPizza?.map((pizza, index) => (
+            <li key={index}>pizza:{pizza.name}</li>
+          ))}
+          <li>{dataProduct?.selectDrink?.name}</li>
           {dataProduct?.selectExtra?.map((extra, index) => (
             <li key={index}>{extra.name}</li>
           ))}

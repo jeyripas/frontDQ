@@ -37,6 +37,10 @@ const CartCardProduct = ({ dataProduct, index }) => {
           <p>
             {dataProduct?.selectOption?.name}:{dataProduct?.selectOption?.size}
           </p>
+          {dataProduct?.selectPizza?.map((pizza, index) => (
+            <p key={index}>pizza: {pizza.name}</p>
+          ))}
+          <p>{dataProduct?.selectDrink?.name}</p>
           {dataProduct?.selectExtra?.map((extra, index) => (
             <p key={index}>{extra.name}</p>
           ))}

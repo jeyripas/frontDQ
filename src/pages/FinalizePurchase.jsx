@@ -23,6 +23,8 @@ const FinalizePurchase = ({ userData }) => {
       counter: product.counter,
       selectOption: product.selectOption,
       selectExtra: product.selectExtra,
+      selectPizza: product.selectPizza,
+      selectDrink: product.selectDrink,
       price: calculatePrice(product),
       totalPrice: calculateTotalPrice(product),
     }));

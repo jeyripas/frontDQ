@@ -9,10 +9,10 @@ import './FinalizePurchaseStyle/FPCheckout.css';
 
 const FPChekout = ({ dataPay, selectSlide, setselectSlide, userData }) => {
   const [message, setMessage] = useState('');
-  const [buttonAnimation, setButtonAnimation] = useState(false);
   const [backButtonAnimation, setbackButtonAnimation] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  console.log(dataPay);
 
   let formToken = 'DEMO-TOKEN-TO-BE-REPLACED';
   useEffect(() => {

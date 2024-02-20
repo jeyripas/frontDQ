@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ThankYou = () => {
   const dataPayJSON = localStorage.getItem('dataPay');
   const dataPayStorage = JSON.parse(dataPayJSON);
-
+  console.log(dataPayStorage);
   return (
     <div className="thankYou__container">
       <h1>Orden Confirmada</h1>
@@ -29,9 +29,21 @@ const ThankYou = () => {
               <tr key={index} className="excel-row">
                 <td>
                   {product.dataProduct.name} {product.selectOption.name}{' '}
-                  {product.selectOption.size},{' '}
+                  {product.selectOption.size},
+                  <br />
+                  {product.selectPizza.length > 0 && (
+                    <span>
+                      pizzas: {product.selectPizza.map((pizza) => pizza.name)}
+                    </span>
+                  )}
+                  <br />
+                  {product.selectDrink
+                    ? ` bebida: ${product.selectDrink.name}`
+                    : ''}
+                  <br />
                   {product.selectExtra.map((extra) => extra.name)}
                 </td>
+
                 <td>{product.counter}</td>
                 <td>s/{product.price}</td>
                 <td>s/{product.totalPrice}</td>

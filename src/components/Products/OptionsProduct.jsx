@@ -3,7 +3,6 @@ import './productsStyle/optionsProduct.css';
 import FormatPrice from '../../hooks/FormatPrice';
 
 const OptionsProduct = ({
-  productOptions,
   openOption,
   setopenOption,
   product,
@@ -12,10 +11,27 @@ const OptionsProduct = ({
   setselectExtra,
   selectExta,
   handleAddToCart,
+  setSelectPizza,
+  selectPizza,
+  setSelectDrink,
+  selectDrink,
 }) => {
   const priceDiscount = (option) => {
     const totalPrice = option?.price - (option?.price * option?.discount) / 100;
     return totalPrice;
+  };
+
+  const handleClickPizza = (pizza) => {
+    if (selectPizza.length === 2 && !selectPizza.includes(pizza)) {
+      // Si ya se han seleccionado dos pizzas y la pizza actual no está en la selección, no hacemos nada
+      return;
+    }
+
+    setSelectPizza((prevSelectPizza) =>
+      prevSelectPizza.includes(pizza)
+        ? prevSelectPizza.filter((item) => item !== pizza)
+        : [...prevSelectPizza, pizza]
+    );
   };
 
   return (
@@ -31,7 +47,8 @@ const OptionsProduct = ({
         </article>
         <article className="optionsProduct__sectionAticleTwo">
           <ul>
-            {productOptions?.map((option) => (
+            {product?.productOptions.length > 0 ? <h4>Tamaño</h4> : ''}
+            {product?.productOptions.map((option) => (
               <li key={option.id} onClick={() => setselectOption(option)}>
                 <p>
                   <span className="optionsProduct__sectionAticleTwo__optionCheckout">
@@ -81,6 +98,60 @@ const OptionsProduct = ({
                 </div>
               </li>
             ))}
+            {product?.productPizzas.length > 0 ? <h4>Pizzas</h4> : ''}
+            {product?.productPizzas.map((extra) => (
+              <li key={extra.id} onClick={() => handleClickPizza(extra)}>
+                <p>
+                  <span
+                    className="optionsProduct__sectionAticleTwo__extraCheckout"
+                    style={{
+                      backgroundColor: selectPizza.some(
+                        (item) => item.id === extra.id
+                      )
+                        ? 'var(--text-color-red)'
+                        : 'white',
+                    }}
+                  >
+                    {selectPizza.includes(extra) && (
+                      <i className="bx bx-check"></i>
+                    )}
+                  </span>
+                  {extra.name}
+                </p>
+              </li>
+            ))}
+            {product?.productDrinks.length > 0 ? <h4>Bebidas</h4> : ''}
+            {product?.productDrinks.map((drink) => (
+              <li
+                key={drink.id}
+                onClick={() => {
+                  selectDrink?.id === drink.id
+                    ? setSelectDrink(null)
+                    : setSelectDrink(drink);
+                }}
+              >
+                <p>
+                  <span className="optionsProduct__sectionAticleTwo__optionCheckout">
+                    <span
+                      className="pseudo-element"
+                      style={{
+                        position: 'absolute',
+                        content: "''",
+                        backgroundColor:
+                          selectDrink?.id === drink.id
+                            ? 'var(--text-color-red)'
+                            : 'transparent',
+                        width: '11px',
+                        height: '11px',
+                        borderRadius: '50%',
+                      }}
+                    ></span>
+                  </span>
+                  {drink.name}
+                </p>
+              </li>
+            ))}
+            {product?.productExtras.length > 0 ? <h4>Extras</h4> : ''}
             {product?.productExtras.map((extra) => (
               <li
                 key={extra.id}

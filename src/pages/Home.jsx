@@ -49,7 +49,7 @@ const Home = () => {
 
         <Link to="/">Pide aquí</Link>
       </section>
-      <section className="home__section__two" onClick={clickTop}></section>
+
       <section className="home__section__three" id="home__section__three">
         <article className="home__section__three-articleOne">
           <div className="home__section__three-line"></div>
@@ -78,7 +78,11 @@ const Home = () => {
           ))}
         </article>
         <article className="home__section__three-articleThree">
-          <img src="/informacion.png" alt="Banner entrega a domicilio" />
+          {window.innerWidth > 800 ? (
+            <img src="/informacion.png" alt="Banner entrega a domicilio" />
+          ) : (
+            <img src="/informacion.png" alt="Banner entrega a domicilio" />
+          )}
         </article>
       </section>
       <section

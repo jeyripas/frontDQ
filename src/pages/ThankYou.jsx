@@ -32,7 +32,8 @@ const ThankYou = () => {
                   <br />
                   {product.selectPizza.length > 0 && (
                     <span>
-                      pizzas: {product.selectPizza.map((pizza) => pizza.name)}
+                      pizzas:{' '}
+                      {product.selectPizza.map((pizza) => ` ${pizza.name} , `)}
                     </span>
                   )}
                   <br />

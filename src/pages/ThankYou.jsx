@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 const ThankYou = () => {
   const dataPayJSON = localStorage.getItem('dataPay');
   const dataPayStorage = JSON.parse(dataPayJSON);
-  console.log(dataPayStorage);
   return (
     <div className="thankYou__container">
       <h1>Orden Confirmada</h1>

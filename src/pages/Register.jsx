@@ -35,7 +35,6 @@ const Register = () => {
     }
   };
 
-  console.log(repeatedPassword);
   return (
     <div className="longin__container">
       <section className="longin__section">

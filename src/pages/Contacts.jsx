@@ -21,17 +21,17 @@ const Contacts = () => {
           <p>Contáctanos</p>
         </article>
         <article className="contactsSectionOne__articleThree">
-          <a>
+          <a href="https://goo.gl/maps/95q99GHCUrj966iVA" target="_blank">
             <i className="icon icon-map-marker"></i>
             <h3>Dirección</h3>
             <p>Av. Micaela Bastidas Zn "F" Mz D Lt 5 Cieneguilla</p>
           </a>
-          <a>
+          <a href="mailto:info@donquezo.com" target="_blank">
             <i className="icon icon-email"></i>
             <h3>Correo</h3>
-            <p>reservas@donquezo.com</p>
+            <p>info@donquezo.com</p>
           </a>
-          <a>
+          <a href="tel:+51987407185" target="_blank">
             <i className="icon icon-phone-handset"></i>
             <h3>Teléfono</h3>
             <p>+51987407185</p>

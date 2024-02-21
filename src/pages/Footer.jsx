@@ -40,11 +40,11 @@ const Footer = () => {
             <li>
               <i className="icon icon-envelope3"></i>
               <a
-                href="mailto:ventas@donquezo.com"
+                href="mailto:info@donquezo.com"
                 className="footer-link"
                 aria-label="Correo de  Don Quezo"
               >
-                Correo: ventas@donquezo.com
+                Correo: info@donquezo.com
               </a>
             </li>
             <li>

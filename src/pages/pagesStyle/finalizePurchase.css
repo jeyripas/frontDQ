@@ -32,6 +32,12 @@
     max-width: 800px;
 }
 
+.finalizePurchase__openingHours {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+}
+
 /* finalizePurchase__sectionOne */
 
 .finalizePurchase__sectionOne {

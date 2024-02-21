@@ -15,6 +15,17 @@ const FinalizePurchase = ({ userData }) => {
   const [selectSlide, setselectSlide] = useState('dataOrder');
   const [dataClient, setdataClient] = useState();
   const [dataPay, setDataPay] = useState({});
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    const now = new Date();
+    const startTime = new Date(now);
+    startTime.setHours(16, 30, 0, 0); // 4:30 PM
+    const endTime = new Date(now);
+    endTime.setHours(22, 30, 0, 0); // 10:30 PM
+
+    setShowContent(now > startTime && now < endTime);
+  }, []);
 
   useEffect(() => {
     // Calcula la información detallada de cada producto
@@ -86,66 +97,75 @@ const FinalizePurchase = ({ userData }) => {
       <section className="finalizePurchase__title">
         <h1>Finalizar Compra</h1>
       </section>
-
-      <div className="finalizePurchase__slideSections">
-        <section
-          className={`finalizePurchase__sectionOne ${
-            selectSlide === 'dataOrder' ? 'finalizePurchase__activeSlide' : ''
-          } `}
-        >
-          <h2>Resumen de tu Pedido:</h2>
-          <div className="finalizePurchase__sectionOne__dataOrder">
-            {cartData?.map((dataProduct, index) => (
-              <FPCardProduct
-                key={index}
-                dataProduct={dataProduct}
-                index={index}
+      {showContent ? (
+        <div className="finalizePurchase__slideSections">
+          <section
+            className={`finalizePurchase__sectionOne ${
+              selectSlide === 'dataOrder' ? 'finalizePurchase__activeSlide' : ''
+            } `}
+          >
+            <h2>Resumen de tu Pedido:</h2>
+            <div className="finalizePurchase__sectionOne__dataOrder">
+              {cartData?.map((dataProduct, index) => (
+                <FPCardProduct
+                  key={index}
+                  dataProduct={dataProduct}
+                  index={index}
+                />
+              ))}
+              <FPDelivery
+                setselectDelivery={setselectDelivery}
+                selectDelivery={selectDelivery}
+                alertDelivery={alertDelivery}
               />
-            ))}
-            <FPDelivery
-              setselectDelivery={setselectDelivery}
-              selectDelivery={selectDelivery}
-              alertDelivery={alertDelivery}
-            />
-            <div className="finalizePurchase__sectionOne__total">
-              <h3>TOTAL: </h3>
-              <p>s/{calculateTotal()}</p>
-            </div>
-            <div
-              className="finalizePurchase__sectionOne__continue"
-              onMouseEnter={() => setButtonAnimation(true)}
-              onMouseLeave={() => setButtonAnimation(false)}
-              onClick={nextSlide}
-            >
-              <p
-                style={
-                  buttonAnimation ? { transform: 'translatex(-100%)' } : {}
-                }
+              <div className="finalizePurchase__sectionOne__total">
+                <h3>TOTAL: </h3>
+                <p>s/{calculateTotal()}</p>
+              </div>
+              <div
+                className="finalizePurchase__sectionOne__continue"
+                onMouseEnter={() => setButtonAnimation(true)}
+                onMouseLeave={() => setButtonAnimation(false)}
+                onClick={nextSlide}
               >
-                CONTINUAR
-              </p>
-              <i
-                className="bx bx-chevron-right"
-                style={buttonAnimation ? { transform: 'translatex(-90%)' } : {}}
-              ></i>
+                <p
+                  style={
+                    buttonAnimation ? { transform: 'translatex(-100%)' } : {}
+                  }
+                >
+                  CONTINUAR
+                </p>
+                <i
+                  className="bx bx-chevron-right"
+                  style={
+                    buttonAnimation ? { transform: 'translatex(-90%)' } : {}
+                  }
+                ></i>
+              </div>
             </div>
-          </div>
-        </section>
-        <FPDataClient
-          calculateTotal={calculateTotal}
-          userData={userData}
-          selectSlide={selectSlide}
-          setselectSlide={setselectSlide}
-          setdataClient={setdataClient}
-          dataPay={dataPay}
+          </section>
+          <FPDataClient
+            calculateTotal={calculateTotal}
+            userData={userData}
+            selectSlide={selectSlide}
+            setselectSlide={setselectSlide}
+            setdataClient={setdataClient}
+            dataPay={dataPay}
+          />
+          <FPChekout
+            dataPay={dataPay}
+            userData={userData}
+            selectSlide={selectSlide}
+            setselectSlide={setselectSlide}
+          />
+        </div>
+      ) : (
+        <img
+          className="finalizePurchase__openingHours"
+          src="houre.jpeg"
+          alt="horario de atencion"
         />
-        <FPChekout
-          dataPay={dataPay}
-          userData={userData}
-          selectSlide={selectSlide}
-          setselectSlide={setselectSlide}
-        />
-      </div>
+      )}
     </div>
   );
 };

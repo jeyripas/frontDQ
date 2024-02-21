@@ -78,11 +78,7 @@ const Home = () => {
           ))}
         </article>
         <article className="home__section__three-articleThree">
-          {' '}
           <img src="/informacion.png" alt="Banner entrega a domicilio" />
-          <div>
-            <Link>Preguntas más frecuentes</Link>
-          </div>
         </article>
       </section>
       <section

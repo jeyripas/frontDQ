@@ -6,6 +6,9 @@ import axios from 'axios';
 const Home = () => {
   const [allSections, setallSections] = useState();
   const [viewWarning, setViewWarning] = useState(true);
+  const [viewSlideImg, setviewSlideImg] = useState(1);
+  const [playSlide, setplaySlide] = useState(true);
+  console.log(playSlide);
 
   useEffect(() => {
     const url = `${import.meta.env.VITE_URL_API}/section-product`;
@@ -15,13 +18,6 @@ const Home = () => {
       .then((res) => setallSections(res.data.sectionProducts))
       .catch((err) => console.log(err));
   }, []);
-
-  const clickTop = () => {
-    const element = document.getElementById('home__section__three');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   useEffect(() => {
     const closeWarningOnOutsideClick = (event) => {
@@ -37,17 +33,73 @@ const Home = () => {
     };
   }, []);
 
+  setTimeout(() => {
+    if (playSlide === true) {
+      setviewSlideImg(viewSlideImg < 3 ? viewSlideImg + 1 : 1);
+    }
+  }, 2000);
+
   return (
     <div className="home__container">
       <section className="home__section__one">
-        <span></span>
-        {window.innerWidth > 800 ? (
-          <img src="./portada.jpg" alt="fondo home Don Quezo" />
-        ) : (
-          <img src="./portadaMobil.jpg" alt="fondo home Don Quezo" />
-        )}
+        <article className="home__section__carousel">
+          <i
+            class="bx bx-chevron-left carrusel__left"
+            onClick={() => {
+              setplaySlide(false),
+                setviewSlideImg(viewSlideImg > 1 ? viewSlideImg - 1 : 3);
+            }}
+          ></i>
+          <div style={viewSlideImg === 1 ? { opacity: '1' } : { opacity: '0' }}>
+            {window.innerWidth > 800 ? (
+              <img src="./portada.jpg" alt="fondo home Don Quezo" />
+            ) : (
+              <img src="./portadaMobil.jpg" alt="fondo home Don Quezo" />
+            )}
+          </div>
+          <div style={viewSlideImg === 2 ? { opacity: '1' } : { opacity: '0' }}>
+            {window.innerWidth > 800 ? (
+              <img src="./informacion.png" alt="fondo home Don Quezo" />
+            ) : (
+              <img src="./informacion.png" alt="fondo home Don Quezo" />
+            )}
+          </div>
+          <div style={viewSlideImg === 3 ? { opacity: '1' } : { opacity: '0' }}>
+            {window.innerWidth > 800 ? (
+              <img src="./bg-reparto.jpg" alt="fondo home Don Quezo" />
+            ) : (
+              <img src="./bg-reparto.jpg" alt="fondo home Don Quezo" />
+            )}
+          </div>
+          <i
+            class="bx bx-chevron-right carrusel__right"
+            onClick={() => {
+              setplaySlide(false),
+                setviewSlideImg(viewSlideImg < 3 ? viewSlideImg + 1 : 1);
+            }}
+          ></i>
+        </article>
 
-        <Link to="/">Pide aquí</Link>
+        <article className="carusel__pin">
+          <span
+            onClick={() => {
+              setplaySlide(false), setviewSlideImg(1);
+            }}
+            style={viewSlideImg === 1 ? { backgroundColor: 'white' } : null}
+          ></span>
+          <span
+            onClick={() => {
+              setplaySlide(false), setviewSlideImg(2);
+            }}
+            style={viewSlideImg === 2 ? { backgroundColor: 'white' } : null}
+          ></span>
+          <span
+            onClick={() => {
+              setplaySlide(false), setviewSlideImg(3);
+            }}
+            style={viewSlideImg === 3 ? { backgroundColor: 'white' } : null}
+          ></span>
+        </article>
       </section>
 
       <section className="home__section__three" id="home__section__three">

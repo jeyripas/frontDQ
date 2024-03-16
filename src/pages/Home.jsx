@@ -35,9 +35,9 @@ const Home = () => {
 
   setTimeout(() => {
     if (playSlide === true) {
-      setviewSlideImg(viewSlideImg < 3 ? viewSlideImg + 1 : 1);
+      setviewSlideImg(viewSlideImg < 5 ? viewSlideImg + 1 : 1);
     }
-  }, 2000);
+  }, 3000);
 
   return (
     <div className="home__container">
@@ -47,35 +47,49 @@ const Home = () => {
             class="bx bx-chevron-left carrusel__left"
             onClick={() => {
               setplaySlide(false),
-                setviewSlideImg(viewSlideImg > 1 ? viewSlideImg - 1 : 3);
+                setviewSlideImg(viewSlideImg > 1 ? viewSlideImg - 1 : 5);
             }}
           ></i>
           <div style={viewSlideImg === 1 ? { opacity: '1' } : { opacity: '0' }}>
             {window.innerWidth > 800 ? (
-              <img src="./portada.jpg" alt="fondo home Don Quezo" />
+              <img src="./banner1.png" alt="fondo home Don Quezo" />
             ) : (
-              <img src="./portadaMobil.jpg" alt="fondo home Don Quezo" />
+              <img src="./banner1.png" alt="fondo home Don Quezo" />
             )}
           </div>
           <div style={viewSlideImg === 2 ? { opacity: '1' } : { opacity: '0' }}>
             {window.innerWidth > 800 ? (
-              <img src="./informacion.png" alt="fondo home Don Quezo" />
+              <img src="./banner2.png" alt="fondo home Don Quezo" />
             ) : (
-              <img src="./informacion.png" alt="fondo home Don Quezo" />
+              <img src="./banner2.png" alt="fondo home Don Quezo" />
             )}
           </div>
           <div style={viewSlideImg === 3 ? { opacity: '1' } : { opacity: '0' }}>
             {window.innerWidth > 800 ? (
-              <img src="./bg-reparto.jpg" alt="fondo home Don Quezo" />
+              <img src="./banner3.png" alt="fondo home Don Quezo" />
             ) : (
-              <img src="./bg-reparto.jpg" alt="fondo home Don Quezo" />
+              <img src="./banner3.png" alt="fondo home Don Quezo" />
+            )}
+          </div>
+          <div style={viewSlideImg === 4 ? { opacity: '1' } : { opacity: '0' }}>
+            {window.innerWidth > 800 ? (
+              <img src="./banner4.png" alt="fondo home Don Quezo" />
+            ) : (
+              <img src="./banner4.png" alt="fondo home Don Quezo" />
+            )}
+          </div>
+          <div style={viewSlideImg === 5 ? { opacity: '1' } : { opacity: '0' }}>
+            {window.innerWidth > 800 ? (
+              <img src="./banner6.png" alt="fondo home Don Quezo" />
+            ) : (
+              <img src="./banner6.png" alt="fondo home Don Quezo" />
             )}
           </div>
           <i
             class="bx bx-chevron-right carrusel__right"
             onClick={() => {
               setplaySlide(false),
-                setviewSlideImg(viewSlideImg < 3 ? viewSlideImg + 1 : 1);
+                setviewSlideImg(viewSlideImg < 5 ? viewSlideImg + 1 : 1);
             }}
           ></i>
         </article>
@@ -98,6 +112,18 @@ const Home = () => {
               setplaySlide(false), setviewSlideImg(3);
             }}
             style={viewSlideImg === 3 ? { backgroundColor: 'white' } : null}
+          ></span>
+          <span
+            onClick={() => {
+              setplaySlide(false), setviewSlideImg(4);
+            }}
+            style={viewSlideImg === 4 ? { backgroundColor: 'white' } : null}
+          ></span>
+          <span
+            onClick={() => {
+              setplaySlide(false), setviewSlideImg(5);
+            }}
+            style={viewSlideImg === 5 ? { backgroundColor: 'white' } : null}
           ></span>
         </article>
       </section>

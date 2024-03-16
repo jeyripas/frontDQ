@@ -10,7 +10,7 @@
 .home__section__one {
     position: relative;
     width: 100%;
-    min-height: 500px;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,8 +43,7 @@
 .home__section__carousel img {
     margin: auto;
     width: 100%;
-
-    object-fit: cover;
+    object-fit: fill;
     background-color: var(--body-red);
     z-index: 1;
 }

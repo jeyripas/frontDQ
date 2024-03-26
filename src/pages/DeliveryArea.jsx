@@ -18,12 +18,13 @@ const DeliveryArea = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  console.log(allDelivery);
   return (
     <div className="deliveryArea__container">
       <section className="deliveryArea__sectionOne">
         <img src="./bg-reparto.jpg" alt="" />
-        <span></span>
-        <h1>Zonas de Reparto</h1>
+        {/* <span></span> */}
+        {/* <h1>Zonas de Reparto</h1>
         <p>
           Conoce las zonas de entrega y las tarifas exclusivas que tenemos para
           tí
@@ -53,7 +54,7 @@ const DeliveryArea = () => {
               <p>4.9</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
       <section className="deliveryArea__sectionTwo">
         <article className="deliveryArea__sectionTwo__articleOne">
@@ -70,7 +71,7 @@ const DeliveryArea = () => {
                   : {}
               }
             >
-              {delivery.name}
+              {delivery.name}: s/{delivery.price}
             </p>
           ))}
         </article>

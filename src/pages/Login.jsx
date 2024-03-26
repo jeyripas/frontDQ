@@ -44,7 +44,7 @@ const Login = ({}) => {
               id="email"
               type="email"
               required
-              placeholder="email"
+              placeholder="Correo electronico"
             />
           </div>
 
@@ -65,7 +65,7 @@ const Login = ({}) => {
               {...register('password')}
               id="password"
               type="password"
-              placeholder="contraseña"
+              placeholder="Contraseña"
               required
             />
           </div>
@@ -76,7 +76,7 @@ const Login = ({}) => {
             ''
           )}
 
-          <button>iniciar sesión</button>
+          <button>Iniciar Sesión</button>
         </form>
 
         <article className="longinSection__article">

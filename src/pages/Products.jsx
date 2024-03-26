@@ -22,6 +22,7 @@ const Products = () => {
   }, [id]);
 
   useEffect(() => {
+    setSelectCategory('Todas');
     const url = `${
       import.meta.env.VITE_URL_API
     }/category-product/all-products/${id}`;

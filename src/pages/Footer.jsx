@@ -98,17 +98,7 @@ const Footer = () => {
       <div className="footer__divTwo">
         <hr />
         <section>
-          <article>
-            <a
-              href="https://idotcode.com"
-              target="_blank"
-              aria-label="Visitar pagina del desarrollador de Don Quezo"
-            >
-              con
-              <i className="bx bxs-heart"></i>
-              by IdotCode
-            </a>
-          </article>
+          <article>® Todos los derechos reservados </article>
           <article>© 2023 Don Quezo</article>
         </section>
       </div>

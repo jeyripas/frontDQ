@@ -144,14 +144,14 @@ const Home = () => {
                 alt="pizzas Don Quezo"
                 className="home__section__three-articleTwo-imgbackground"
               />
-              <img
+              {/* <img
                 src={section.sectionIcon}
                 width="64"
                 height="64"
                 alt="pizzas icono Don Quezo"
                 className="home__section__three-articleTwo-icon"
               />
-              <h3>{section.name}</h3>
+              <h3>{section.name}</h3> */}
             </Link>
           ))}
         </article>

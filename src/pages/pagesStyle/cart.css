@@ -18,6 +18,17 @@
     transition: 0.5s ease
 }
 
+.closeCart__button {
+    position: absolute;
+    left: -35px;
+    top: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 30px;
+
+}
+
 .cart__sectionOne {
     width: 100%;
     height: calc(100% - 200px);

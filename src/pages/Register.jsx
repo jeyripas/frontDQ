@@ -55,7 +55,7 @@ const Register = () => {
               id="name"
               type="text"
               required
-              placeholder="Nombres"
+              placeholder="Nombre"
             />
           </div>
           <div className="login__div">
@@ -79,7 +79,7 @@ const Register = () => {
               id="email"
               type="email"
               required
-              placeholder="email"
+              placeholder="Correo electronico"
             />
           </div>
           <div className="login__div" style={{ width: '47%' }}>
@@ -89,10 +89,20 @@ const Register = () => {
             <input
               {...register('dni')}
               id="dni"
-              type="number"
-              onInput={(e) => (e.target.value = e.target.value.slice(0, 8))}
+              type="text"
+              onKeyDown={(e) => {
+                if (
+                  !(
+                    (e.keyCode > 95 && e.keyCode < 106) ||
+                    (e.keyCode > 47 && e.keyCode < 58) ||
+                    e.keyCode === 8
+                  )
+                ) {
+                  e.preventDefault();
+                }
+              }}
               required
-              placeholder="dni"
+              placeholder="Doc. identidad"
             />
           </div>
           <div className="login__div" style={{ width: '47%' }}>
@@ -104,7 +114,7 @@ const Register = () => {
               id="phoneNumber"
               type="number"
               required
-              placeholder="telefono"
+              placeholder="Celular"
             />
           </div>
           <div className="login__div">
@@ -122,7 +132,7 @@ const Register = () => {
               id="address"
               type="text"
               required
-              placeholder="su dirección"
+              placeholder="Dirección"
             />
           </div>
           <div className="login__div">
@@ -133,7 +143,7 @@ const Register = () => {
               {...register('password')}
               id="password"
               type="password"
-              placeholder="contraseña"
+              placeholder="Contraseña"
               minLength={6}
               required
             />
@@ -151,7 +161,7 @@ const Register = () => {
               {...register('repeatPassword')}
               id="repeatPassword"
               type="password"
-              placeholder="repita su contraseña"
+              placeholder="Repita su Contraseña"
               minLength={6}
               required
             />

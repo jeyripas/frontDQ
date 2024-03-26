@@ -6,7 +6,6 @@ import { useDispatch } from 'react-redux';
 import { setCart } from '../../store/Slices/Cart.slice';
 
 const CardProduct = ({ product, selectCategory, filterTextProduct }) => {
-  const [productOptions, setProductOptions] = useState([]);
   const [openOption, setopenOption] = useState(false);
   const [selectOption, setselectOption] = useState(null);
   const [selectDefaultOption, setselectDefaultOption] = useState(null);
@@ -18,7 +17,6 @@ const CardProduct = ({ product, selectCategory, filterTextProduct }) => {
   useEffect(() => {
     const configureProductOptions = () => {
       const options = product.productOptions.map((option) => option);
-      setProductOptions(options);
 
       const defaultOption = options.find(
         (option) => option.name.toLowerCase() === 'grande'
@@ -40,7 +38,7 @@ const CardProduct = ({ product, selectCategory, filterTextProduct }) => {
 
   const isCategoryMatch =
     selectCategory === 'Todas' ||
-    product.categoryProductId === selectCategory.id;
+    product.categoryProductId === selectCategory?.id;
 
   const shouldShowProduct = isCategoryMatch && isTextMatch;
 
@@ -76,7 +74,10 @@ const CardProduct = ({ product, selectCategory, filterTextProduct }) => {
 
   return (
     <div className={`cardProduct__container ${validFilterProduct}`}>
-      <article className="cardProduct__articleOne">
+      <article
+        className="cardProduct__articleOne"
+        onClick={() => setopenOption(true)}
+      >
         <img src={product.productImg} alt={product?.name} />
         <div>
           <h3>{product.name}</h3>
@@ -107,7 +108,7 @@ const CardProduct = ({ product, selectCategory, filterTextProduct }) => {
             className="cardProduct__articleTwo__options"
             onClick={() => setopenOption(true)}
           >
-            Opciones:
+            Opciones
           </li>
 
           <li className="cardProduct__articleTwo__price">
@@ -123,7 +124,7 @@ const CardProduct = ({ product, selectCategory, filterTextProduct }) => {
             ) : null}
             <p
               style={
-                selectDefaultOption?.discount > 0
+                selectOption?.discount > 0
                   ? {
                       textDecoration: 'line-through',
                       color: '#666666cc',
@@ -132,8 +133,8 @@ const CardProduct = ({ product, selectCategory, filterTextProduct }) => {
               }
             >
               S/
-              {selectDefaultOption ? (
-                <FormatPrice price={selectDefaultOption.price} />
+              {selectOption ? (
+                <FormatPrice price={selectOption.price} />
               ) : (
                 '0.00'
               )}

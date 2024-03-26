@@ -32,6 +32,13 @@ const Cart = ({ openCart, cartData, setopenCart, userData }) => {
 
   return (
     <div className={`cart__container  ${openCart ? '' : 'closeCart'}`}>
+      <button
+        className="closeCart__button"
+        type="button"
+        onClick={() => setopenCart(!openCart)}
+      >
+        <i className="bx bx-x"></i>
+      </button>
       <section className="cart__sectionOne">
         {cartData?.map((dataProduct, index) => (
           <CartCardProduct

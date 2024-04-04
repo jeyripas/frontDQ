@@ -97,7 +97,7 @@ const FinalizePurchase = ({ userData }) => {
       <section className="finalizePurchase__title">
         <h1>Finalizar Compra</h1>
       </section>
-      {showContent ? (
+      {!showContent ? (
         <div className="finalizePurchase__slideSections">
           <section
             className={`finalizePurchase__sectionOne ${

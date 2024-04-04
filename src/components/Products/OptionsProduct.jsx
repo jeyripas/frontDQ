@@ -47,7 +47,7 @@ const OptionsProduct = ({
         </article>
         <article className="optionsProduct__sectionAticleTwo">
           <ul>
-            {product?.productOptions.length > 0 ? <h4>Tamaño</h4> : ''}
+            {product?.productOptions.length > 0 ? <h4>Detalle</h4> : ''}
             {product?.productOptions.map((option) => (
               <li key={option.id} onClick={() => setselectOption(option)}>
                 <p>

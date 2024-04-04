@@ -373,4 +373,10 @@
     .home__section__one {
         height: 300px;
     }
+
+    .home__section__three-articleTwo a {
+        position: relative;
+        width: 100%;
+        height: 14em;
+    }
 }

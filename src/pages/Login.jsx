@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './pagesStyle/login.css';
 import { useState } from 'react';
 
@@ -44,7 +44,7 @@ const Login = ({}) => {
               id="email"
               type="email"
               required
-              placeholder="Correo electronico"
+              placeholder="email"
             />
           </div>
 
@@ -65,7 +65,7 @@ const Login = ({}) => {
               {...register('password')}
               id="password"
               type="password"
-              placeholder="Contraseña"
+              placeholder="contraseña"
               required
             />
           </div>
@@ -76,9 +76,9 @@ const Login = ({}) => {
             ''
           )}
 
-          <button>Iniciar Sesión</button>
+          <button>iniciar sesión</button>
         </form>
-
+        <Link to="/recover-password">¿Olvidaste tu contraseña?</Link>
         <article className="longinSection__article">
           <span>¿No tienes una cuenta?</span>
           <p onClick={() => navigate('/register')}>Registrate</p>

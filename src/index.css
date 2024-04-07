@@ -5,7 +5,6 @@
   font-style: normal;
 }
 
-
 * {
   box-sizing: border-box;
 }
@@ -21,7 +20,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #F1192F;
+  background-color: #f1192f;
   border-radius: 1em;
 }
 
@@ -31,18 +30,18 @@
 
 :root {
   --body-black: #000000;
-  --body-yeloow: #FEB901;
-  --body-white: #fff;
-  --body-light: #f8f8f8;
+  --body-yeloow: #feb901;
+  --body-white: #ffffff;
+  --body-light: #fffbfb;
   --body-gray: #2f2f2f;
-  --body-red: #F1192F;
+  --body-red: #f1192f;
   --body-blueDark: #121921;
   --text-color-black: #0b0b0b;
   --text-color-grayLight: #c3c2c2cc;
   --text-color-white: #ffffff;
   --text-color-gray: #333;
   --text-color-blue: #0242d8;
-  --text-color-red: #F1192F;
+  --text-color-red: #f1192f;
 }
 
 body {

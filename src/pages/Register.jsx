@@ -55,7 +55,7 @@ const Register = () => {
               id="name"
               type="text"
               required
-              placeholder="Nombre"
+              placeholder="Nombres"
             />
           </div>
           <div className="login__div">
@@ -79,7 +79,7 @@ const Register = () => {
               id="email"
               type="email"
               required
-              placeholder="Correo electronico"
+              placeholder="email"
             />
           </div>
           <div className="login__div" style={{ width: '47%' }}>
@@ -89,20 +89,10 @@ const Register = () => {
             <input
               {...register('dni')}
               id="dni"
-              type="text"
-              onKeyDown={(e) => {
-                if (
-                  !(
-                    (e.keyCode > 95 && e.keyCode < 106) ||
-                    (e.keyCode > 47 && e.keyCode < 58) ||
-                    e.keyCode === 8
-                  )
-                ) {
-                  e.preventDefault();
-                }
-              }}
+              type="number"
+              onInput={(e) => (e.target.value = e.target.value.slice(0, 8))}
               required
-              placeholder="Doc. identidad"
+              placeholder="dni"
             />
           </div>
           <div className="login__div" style={{ width: '47%' }}>
@@ -114,12 +104,12 @@ const Register = () => {
               id="phoneNumber"
               type="number"
               required
-              placeholder="Celular"
+              placeholder="telefono"
             />
           </div>
           <div className="login__div">
             <label htmlFor="date">
-              <i class="bx bxs-calendar"></i>
+              <i className="bx bxs-calendar"></i>
             </label>
             <input {...register('date')} id="date" type="date" required />
           </div>
@@ -132,7 +122,7 @@ const Register = () => {
               id="address"
               type="text"
               required
-              placeholder="Dirección"
+              placeholder="su dirección"
             />
           </div>
           <div className="login__div">
@@ -143,7 +133,7 @@ const Register = () => {
               {...register('password')}
               id="password"
               type="password"
-              placeholder="Contraseña"
+              placeholder="contraseña"
               minLength={6}
               required
             />
@@ -161,7 +151,7 @@ const Register = () => {
               {...register('repeatPassword')}
               id="repeatPassword"
               type="password"
-              placeholder="Repita su Contraseña"
+              placeholder="repita su contraseña"
               minLength={6}
               required
             />

@@ -17,6 +17,8 @@ import MyProfile from './pages/MyProfile';
 import Contacts from './pages/Contacts';
 import ThankYou from './pages/ThankYou';
 import ScrollToTop from './hooks/ScrollToTop';
+import RecoverPassword from './pages/RecoverPassword';
+import UpdatePassword from './pages/UpdatePassword';
 
 function App() {
   const userDataJSON = localStorage.getItem('userData');
@@ -54,6 +56,11 @@ function App() {
         <Route path="/log-in" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/recover-password" element={<RecoverPassword />} />
+        <Route
+          path="/update-password/client/:clientId/codeRecoverPassword/:code"
+          element={<UpdatePassword />}
+        />
 
         <Route element={<ProtectedRoutes />}>
           <Route

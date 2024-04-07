@@ -2,13 +2,21 @@ import React, { useEffect, useState } from 'react';
 import './pagesStyle/home.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 
+// Default theme
+import '@splidejs/react-splide/css';
+
+// or other themes
+import '@splidejs/react-splide/css/skyblue';
+import '@splidejs/react-splide/css/sea-green';
+
+// or only core styles
+import '@splidejs/react-splide/css/core';
 const Home = () => {
   const [allSections, setallSections] = useState();
   const [viewWarning, setViewWarning] = useState(true);
   const [viewSlideImg, setviewSlideImg] = useState(1);
-  const [playSlide, setplaySlide] = useState(true);
-  console.log(playSlide);
 
   useEffect(() => {
     const url = `${import.meta.env.VITE_URL_API}/section-product`;
@@ -33,99 +41,57 @@ const Home = () => {
     };
   }, []);
 
-  setTimeout(() => {
-    if (playSlide === true) {
-      setviewSlideImg(viewSlideImg < 5 ? viewSlideImg + 1 : 1);
-    }
-  }, 3000);
+  const options = {
+    type: 'loop',
+    autoplay: true,
+    pauseOnHover: false,
+    resetProgress: false,
+  };
 
   return (
     <div className="home__container">
       <section className="home__section__one">
-        <article className="home__section__carousel">
-          <i
-            class="bx bx-chevron-left carrusel__left"
-            onClick={() => {
-              setplaySlide(false),
-                setviewSlideImg(viewSlideImg > 1 ? viewSlideImg - 1 : 5);
-            }}
-          ></i>
-          <div style={viewSlideImg === 1 ? { opacity: '1' } : { opacity: '0' }}>
+        <Splide
+          options={options}
+          aria-labelledby="autoplay-example-heading"
+          className="home__section__carousel"
+        >
+          <SplideSlide>
             {window.innerWidth > 800 ? (
               <img src="./banner1.png" alt="fondo home Don Quezo" />
             ) : (
               <img src="./banner1.png" alt="fondo home Don Quezo" />
             )}
-          </div>
-          <div style={viewSlideImg === 2 ? { opacity: '1' } : { opacity: '0' }}>
+          </SplideSlide>
+          <SplideSlide>
             {window.innerWidth > 800 ? (
               <img src="./banner2.png" alt="fondo home Don Quezo" />
             ) : (
               <img src="./banner2.png" alt="fondo home Don Quezo" />
             )}
-          </div>
-          <div style={viewSlideImg === 3 ? { opacity: '1' } : { opacity: '0' }}>
+          </SplideSlide>
+          <SplideSlide>
             {window.innerWidth > 800 ? (
               <img src="./banner3.png" alt="fondo home Don Quezo" />
             ) : (
               <img src="./banner3.png" alt="fondo home Don Quezo" />
             )}
-          </div>
-          <div style={viewSlideImg === 4 ? { opacity: '1' } : { opacity: '0' }}>
+          </SplideSlide>
+          <SplideSlide>
             {window.innerWidth > 800 ? (
               <img src="./banner4.png" alt="fondo home Don Quezo" />
             ) : (
               <img src="./banner4.png" alt="fondo home Don Quezo" />
             )}
-          </div>
-          <div style={viewSlideImg === 5 ? { opacity: '1' } : { opacity: '0' }}>
+          </SplideSlide>
+          <SplideSlide>
             {window.innerWidth > 800 ? (
-              <img src="./banner6.png" alt="fondo home Don Quezo" />
+              <img src="./banner5.png" alt="fondo home Don Quezo" />
             ) : (
-              <img src="./banner6.png" alt="fondo home Don Quezo" />
+              <img src="./banner5.png" alt="fondo home Don Quezo" />
             )}
-          </div>
-          <i
-            class="bx bx-chevron-right carrusel__right"
-            onClick={() => {
-              setplaySlide(false),
-                setviewSlideImg(viewSlideImg < 5 ? viewSlideImg + 1 : 1);
-            }}
-          ></i>
-        </article>
-
-        <article className="carusel__pin">
-          <span
-            onClick={() => {
-              setplaySlide(false), setviewSlideImg(1);
-            }}
-            style={viewSlideImg === 1 ? { backgroundColor: 'white' } : null}
-          ></span>
-          <span
-            onClick={() => {
-              setplaySlide(false), setviewSlideImg(2);
-            }}
-            style={viewSlideImg === 2 ? { backgroundColor: 'white' } : null}
-          ></span>
-          <span
-            onClick={() => {
-              setplaySlide(false), setviewSlideImg(3);
-            }}
-            style={viewSlideImg === 3 ? { backgroundColor: 'white' } : null}
-          ></span>
-          <span
-            onClick={() => {
-              setplaySlide(false), setviewSlideImg(4);
-            }}
-            style={viewSlideImg === 4 ? { backgroundColor: 'white' } : null}
-          ></span>
-          <span
-            onClick={() => {
-              setplaySlide(false), setviewSlideImg(5);
-            }}
-            style={viewSlideImg === 5 ? { backgroundColor: 'white' } : null}
-          ></span>
-        </article>
+          </SplideSlide>
+        </Splide>
       </section>
 
       <section className="home__section__three" id="home__section__three">

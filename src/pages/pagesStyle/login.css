@@ -6,12 +6,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .longin__section {
-  width: 100%;
-  max-width: 400px;
+  width: 20em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,7 +41,6 @@
   gap: 1em;
 }
 
-
 .login__div {
   position: relative;
   width: 100%;
@@ -62,17 +59,16 @@
 
 .login__div i {
   color: var(--text-color-gray);
-
 }
 
 .login__div input {
-  width: 100% !important;
+  width: 100%;
   font-size: 0.9em;
   font-weight: 400;
   border-radius: 0.5em;
   border: 0.1px solid var(--text-color-grayLight);
   background-color: var(--body-white);
-  padding: 0.5em;
+  padding: 10px 0.5em;
   padding-left: 2.5em;
   color: var(--text-color-gray);
   box-shadow: 0px 0px 10px 7px rgb(255 255 255 / 20%);
@@ -110,7 +106,6 @@
   gap: 0.5em;
   justify-content: center;
   align-items: center;
-
 }
 
 .longinSection__article span {
@@ -127,4 +122,8 @@
 
 .longinSection__article p:hover {
   font-weight: 600;
+}
+
+.longin__section a {
+  color: var(--text-color-red);
 }

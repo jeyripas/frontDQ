@@ -60,35 +60,21 @@ const Home = () => {
             {window.innerWidth > 800 ? (
               <img src="./banner1.png" alt="fondo home Don Quezo" />
             ) : (
-              <img src="./banner1.png" alt="fondo home Don Quezo" />
+              <img src="./banner1Mobil.png" alt="fondo home Don Quezo" />
             )}
           </SplideSlide>
           <SplideSlide>
             {window.innerWidth > 800 ? (
               <img src="./banner2.png" alt="fondo home Don Quezo" />
             ) : (
-              <img src="./banner2.png" alt="fondo home Don Quezo" />
+              <img src="./banner2Mobil.png" alt="fondo home Don Quezo" />
             )}
           </SplideSlide>
           <SplideSlide>
             {window.innerWidth > 800 ? (
               <img src="./banner3.png" alt="fondo home Don Quezo" />
             ) : (
-              <img src="./banner3.png" alt="fondo home Don Quezo" />
-            )}
-          </SplideSlide>
-          <SplideSlide>
-            {window.innerWidth > 800 ? (
-              <img src="./banner4.png" alt="fondo home Don Quezo" />
-            ) : (
-              <img src="./banner4.png" alt="fondo home Don Quezo" />
-            )}
-          </SplideSlide>
-          <SplideSlide>
-            {window.innerWidth > 800 ? (
-              <img src="./banner5.png" alt="fondo home Don Quezo" />
-            ) : (
-              <img src="./banner5.png" alt="fondo home Don Quezo" />
+              <img src="./banner3Mobil.png" alt="fondo home Don Quezo" />
             )}
           </SplideSlide>
         </Splide>

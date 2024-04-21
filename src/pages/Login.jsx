@@ -44,7 +44,7 @@ const Login = ({}) => {
               id="email"
               type="email"
               required
-              placeholder="email"
+              placeholder="Correo electronico"
             />
           </div>
 

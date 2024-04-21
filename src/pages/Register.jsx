@@ -79,7 +79,7 @@ const Register = () => {
               id="email"
               type="email"
               required
-              placeholder="email"
+              placeholder="Correo electronico"
             />
           </div>
           <div className="login__div" style={{ width: '47%' }}>
@@ -107,7 +107,8 @@ const Register = () => {
               placeholder="telefono"
             />
           </div>
-          <div className="login__div">
+          <div className="login__div" style={{ marginTop: '20px' }}>
+            <p style={{ fontSize: '14px', left: '0' }}>Fecha de Nacimiento</p>
             <label htmlFor="date">
               <i className="bx bxs-calendar"></i>
             </label>

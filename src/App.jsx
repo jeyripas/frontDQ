@@ -45,7 +45,7 @@ function App() {
   }, [userDataJSON]);
 
   return (
-    <div className="app_container">
+    <>
       <ScrollToTop />
       <Header userData={userStorage?.client} />
 
@@ -75,7 +75,7 @@ function App() {
         </Route>
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 

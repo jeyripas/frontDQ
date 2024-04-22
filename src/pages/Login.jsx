@@ -25,7 +25,6 @@ const Login = ({}) => {
 
       .catch((err) => {
         seterror(err.response.data);
-        console.log(err);
       });
   };
 

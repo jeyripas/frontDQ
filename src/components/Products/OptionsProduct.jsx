@@ -98,7 +98,7 @@ const OptionsProduct = ({
                 </div>
               </li>
             ))}
-            {product?.productPizzas.length > 0 ? <h4>Pizzas</h4> : ''}
+            {product?.productPizzas.length > 0 ? <h4>Sabores</h4> : ''}
             {product?.productPizzas.map((extra) => (
               <li key={extra.id} onClick={() => handleClickPizza(extra)}>
                 <p>
@@ -188,7 +188,7 @@ const OptionsProduct = ({
           </ul>
         </article>
         <article className="optionsProduct__sectionAticleThree">
-          <p onClick={() => setopenOption(false)}>close</p>
+          <p onClick={() => setopenOption(false)}>Cerrar</p>
           <button
             onClick={() => {
               handleAddToCart();

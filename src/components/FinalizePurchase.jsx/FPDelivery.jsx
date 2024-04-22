@@ -2,19 +2,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import FormatPrice from '../../hooks/FormatPrice';
 import './FinalizePurchaseStyle/FPDelivery.css';
-import { useNavigate } from 'react-router-dom';
 
 const FPDelivery = ({ setselectDelivery, selectDelivery, alertDelivery }) => {
-  const navigate = useNavigate();
-
   const [allDeliveries, setallDeliveries] = useState();
   useEffect(() => {
     const url = `${import.meta.env.VITE_URL_API}/delivery`;
 
-    axios
-      .get(url)
-      .then((res) => setallDeliveries(res.data.deliveries))
-      .catch((err) => console.log(err));
+    axios.get(url).then((res) => setallDeliveries(res.data.deliveries));
   }, []);
 
   return (

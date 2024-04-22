@@ -15,10 +15,7 @@ const Products = () => {
   useEffect(() => {
     const url = `${import.meta.env.VITE_URL_API}/section-product/${id}`;
 
-    axios
-      .get(url)
-      .then((res) => setSeccionCategories(res.data.sectionProduct))
-      .catch((err) => console.log(err));
+    axios.get(url).then((res) => setSeccionCategories(res.data.sectionProduct));
   }, [id]);
 
   useEffect(() => {
@@ -27,10 +24,7 @@ const Products = () => {
       import.meta.env.VITE_URL_API
     }/category-product/all-products/${id}`;
 
-    axios
-      .get(url)
-      .then((res) => setAllProduct(res.data.categoryProducts))
-      .catch((err) => console.log(err));
+    axios.get(url).then((res) => setAllProduct(res.data.categoryProducts));
   }, [id]);
 
   return (

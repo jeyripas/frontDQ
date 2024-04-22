@@ -13,6 +13,7 @@ const CardProduct = ({ product, selectCategory, filterTextProduct }) => {
   const [selectPizza, setSelectPizza] = useState([]);
   const [selectDrink, setSelectDrink] = useState(null);
   const dispatch = useDispatch();
+  console.log(product);
 
   useEffect(() => {
     const configureProductOptions = () => {
@@ -79,10 +80,13 @@ const CardProduct = ({ product, selectCategory, filterTextProduct }) => {
         onClick={() => setopenOption(true)}
       >
         <img src={product.productImg} alt={product?.name} />
+
         <div>
           <h3>{product.name}</h3>
-          <small>{product.description}</small>
           <p>{selectOption?.name}</p>
+          {product.viewText === 'active' && (
+            <small>{product.description}</small>
+          )}
         </div>
         {product.label === 'no' ? (
           ''

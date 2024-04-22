@@ -18,15 +18,9 @@ const MyProfile = ({ userData }) => {
         userData?.id
       }?page=${currentPage}`;
 
-      axios
-        .get(url, config)
-        .then((res) => {
-          setClientDataOrder(res.data);
-        })
-
-        .catch((err) => {
-          console.log(err);
-        });
+      axios.get(url, config).then((res) => {
+        setClientDataOrder(res.data);
+      });
     }
   }, [userData, openUpdateImg, currentPage]);
 

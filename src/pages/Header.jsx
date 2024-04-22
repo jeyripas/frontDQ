@@ -16,10 +16,7 @@ const Header = ({ userData }) => {
   useEffect(() => {
     const url = `${import.meta.env.VITE_URL_API}/section-product`;
 
-    axios
-      .get(url)
-      .then((res) => setallSections(res.data.sectionProducts))
-      .catch((err) => console.log(err));
+    axios.get(url).then((res) => setallSections(res.data.sectionProducts));
   }, []);
 
   const onclickCloseMenu = () => {

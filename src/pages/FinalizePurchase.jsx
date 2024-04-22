@@ -22,10 +22,7 @@ const FinalizePurchase = ({ userData }) => {
   useEffect(() => {
     const url = `${import.meta.env.VITE_URL_API}/openingHours/1`;
 
-    axios
-      .get(url)
-      .then((res) => setOpeningHoure(res.data.openingHoure))
-      .catch((err) => console.log(err));
+    axios.get(url).then((res) => setOpeningHoure(res.data.openingHoure));
   }, []);
 
   useEffect(() => {

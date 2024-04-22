@@ -35,6 +35,24 @@ const Register = () => {
     }
   };
 
+  const soloNumerosYSimbolos = (event) => {
+    const charCode = event.which ? event.which : event.keyCode;
+    // Permitir números del 0 al 9 (48-57), y algunos signos de puntuación comunes
+    if (
+      (charCode >= 48 && charCode <= 57) || // Números
+      (charCode >= 33 && charCode <= 47) || // Signos de puntuación (!"#$%&'()*+,-./)
+      (charCode >= 58 && charCode <= 64) || // Signos de puntuación (:;<=>?@)
+      (charCode >= 91 && charCode <= 96) || // Signos de puntuación ([\]^_`)
+      (charCode >= 123 && charCode <= 126) || // Signos de puntuación ({|}~)
+      charCode === 32 || // Espacio
+      charCode === 8 // Tecla de retroceso
+    ) {
+      return true;
+    } else {
+      event.preventDefault();
+    }
+  };
+
   return (
     <div className="longin__container">
       <section className="longin__section">
@@ -89,10 +107,11 @@ const Register = () => {
             <input
               {...register('dni')}
               id="dni"
-              type="number"
+              type="text"
               onInput={(e) => (e.target.value = e.target.value.slice(0, 8))}
+              onKeyPress={soloNumerosYSimbolos}
               required
-              placeholder="dni"
+              placeholder="DNI"
             />
           </div>
           <div className="login__div" style={{ width: '47%' }}>
@@ -102,13 +121,14 @@ const Register = () => {
             <input
               {...register('phoneNumber')}
               id="phoneNumber"
-              type="number"
+              type="text"
+              onKeyPress={soloNumerosYSimbolos}
               required
-              placeholder="telefono"
+              placeholder="Celular"
             />
           </div>
           <div className="login__div" style={{ marginTop: '20px' }}>
-            <p style={{ fontSize: '14px', left: '0' }}>Fecha de Nacimiento</p>
+            <p style={{ fontSize: '14px', left: '0' }}>Cumpleaños</p>
             <label htmlFor="date">
               <i className="bx bxs-calendar"></i>
             </label>
@@ -123,7 +143,7 @@ const Register = () => {
               id="address"
               type="text"
               required
-              placeholder="su dirección"
+              placeholder="Dirección"
             />
           </div>
           <div className="login__div">
@@ -134,7 +154,7 @@ const Register = () => {
               {...register('password')}
               id="password"
               type="password"
-              placeholder="contraseña"
+              placeholder="Contraseña"
               minLength={6}
               required
             />
@@ -152,7 +172,7 @@ const Register = () => {
               {...register('repeatPassword')}
               id="repeatPassword"
               type="password"
-              placeholder="repita su contraseña"
+              placeholder="Repita su contraseña"
               minLength={6}
               required
             />

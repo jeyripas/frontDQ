@@ -16,15 +16,33 @@ import '@splidejs/react-splide/css/core';
 const Home = () => {
   const [allSections, setallSections] = useState();
   const [viewWarning, setViewWarning] = useState(true);
-  const [viewSlideImg, setviewSlideImg] = useState(1);
+  const [maxWindow, setMaxWindow] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 800) {
+        setMaxWindow(true);
+      } else {
+        setMaxWindow(false);
+      }
+    };
+
+    // Agregar el listener para el evento resize
+    window.addEventListener('resize', handleResize);
+
+    // Llama a handleResize una vez para establecer el valor inicial
+    handleResize();
+
+    // Eliminar el listener cuando el componente se desmonte
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [window.innerWidth]); // Dependencia actualizada para que el efecto se vuelva a ejecutar cuando cambie el tamaño de la ventana
 
   useEffect(() => {
     const url = `${import.meta.env.VITE_URL_API}/section-product`;
 
-    axios
-      .get(url)
-      .then((res) => setallSections(res.data.sectionProducts))
-      .catch((err) => console.log(err));
+    axios.get(url).then((res) => setallSections(res.data.sectionProducts));
   }, []);
 
   useEffect(() => {
@@ -54,41 +72,27 @@ const Home = () => {
         <Splide
           options={options}
           aria-labelledby="autoplay-example-heading"
-          className="home__section__carousel"
+          className="home__section__one home__section__carousel"
         >
           <SplideSlide>
-            {window.innerWidth > 800 ? (
+            {maxWindow ? (
               <img src="./banner1.png" alt="fondo home Don Quezo" />
             ) : (
-              <img src="./banner1.png" alt="fondo home Don Quezo" />
+              <img src="./banner1Mobil.png" alt="fondo home Don Quezo" />
             )}
           </SplideSlide>
           <SplideSlide>
-            {window.innerWidth > 800 ? (
+            {maxWindow ? (
               <img src="./banner2.png" alt="fondo home Don Quezo" />
             ) : (
-              <img src="./banner2.png" alt="fondo home Don Quezo" />
+              <img src="./banner2Mobil.png" alt="fondo home Don Quezo" />
             )}
           </SplideSlide>
           <SplideSlide>
-            {window.innerWidth > 800 ? (
+            {maxWindow ? (
               <img src="./banner3.png" alt="fondo home Don Quezo" />
             ) : (
-              <img src="./banner3.png" alt="fondo home Don Quezo" />
-            )}
-          </SplideSlide>
-          <SplideSlide>
-            {window.innerWidth > 800 ? (
-              <img src="./banner4.png" alt="fondo home Don Quezo" />
-            ) : (
-              <img src="./banner4.png" alt="fondo home Don Quezo" />
-            )}
-          </SplideSlide>
-          <SplideSlide>
-            {window.innerWidth > 800 ? (
-              <img src="./banner5.png" alt="fondo home Don Quezo" />
-            ) : (
-              <img src="./banner5.png" alt="fondo home Don Quezo" />
+              <img src="./banner3Mobil.png" alt="fondo home Don Quezo" />
             )}
           </SplideSlide>
         </Splide>
@@ -121,27 +125,22 @@ const Home = () => {
             </Link>
           ))}
         </article>
-        <article className="home__section__three-articleThree">
-          {window.innerWidth > 800 ? (
-            <img src="/informacion.png" alt="Banner entrega a domicilio" />
-          ) : (
-            <img src="/informacion.png" alt="Banner entrega a domicilio" />
-          )}
-        </article>
       </section>
+      <article className="home__section__three-articleThree">
+        {maxWindow ? (
+          <img src="/informacion.png" alt="Banner entrega a domicilio" />
+        ) : (
+          <img src="/informacionMobil.png" alt="Banner entrega a domicilio" />
+        )}
+      </article>
       <section
         className={`home__section__four ${
           viewWarning ? '' : 'home__closeSection__four'
         }`}
       >
         <article className="home__section__four__article">
-          <button
-            id="al"
-            aria-label="Name"
-            onClick={() => setViewWarning(false)}
-          ></button>
           <p>Aviso</p>
-          <img src="/banner-aviso-inicio.png" alt="aviso de entrega" />
+          <img src="/homePop.png" alt="aviso de entrega" />
           <div>
             <span onClick={() => setViewWarning(false)}>Cerrar</span>
           </div>

@@ -9,25 +9,12 @@ const DeliveryArea = () => {
   const [maxWindow, setMaxWindow] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 800) {
-        setMaxWindow(true);
-      } else {
-        setMaxWindow(false);
-      }
-    };
-
-    // Agregar el listener para el evento resize
-    window.addEventListener('resize', handleResize);
-
-    // Llama a handleResize una vez para establecer el valor inicial
-    handleResize();
-
-    // Eliminar el listener cuando el componente se desmonte
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [window.innerWidth]); // Dependencia actualizada para que el efecto se vuelva a ejecutar cuando cambie el tamaño de la ventana
+    if (window.innerWidth > 800) {
+      setMaxWindow(true);
+    } else {
+      setMaxWindow(false);
+    }
+  }, []);
 
   useEffect(() => {
     const url = `${import.meta.env.VITE_URL_API}/delivery`;

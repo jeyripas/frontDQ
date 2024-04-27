@@ -37,7 +37,6 @@
 .home__section__carousel img {
   margin: auto;
   width: 100%;
-  height: auto;
   object-fit: cover;
   background-color: var(--body-red);
   z-index: 1;

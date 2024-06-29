@@ -18,6 +18,7 @@ const RecoverPassword = () => {
       })
 
       .catch((err) => {
+        console.log(err.response);
         seterror(err.response.data.error);
       });
   };

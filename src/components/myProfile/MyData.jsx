@@ -21,14 +21,9 @@ const MyData = ({ userData, viewYourDate }) => {
   const submit = async () => {
     const url = `${import.meta.env.VITE_URL_API}/client//${userData?.id}`;
 
-    axios
-      .patch(url, dataForm, config)
-      .then((res) => {
-        window.location.reload();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    axios.patch(url, dataForm, config).then((res) => {
+      window.location.reload();
+    });
   };
 
   return (

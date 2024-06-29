@@ -12,7 +12,6 @@ const FPChekout = ({ dataPay, selectSlide, setselectSlide, userData }) => {
   const [backButtonAnimation, setbackButtonAnimation] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log(dataPay);
 
   let formToken = 'DEMO-TOKEN-TO-BE-REPLACED';
   useEffect(() => {

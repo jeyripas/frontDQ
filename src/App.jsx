@@ -38,14 +38,13 @@ function App() {
         })
 
         .catch((err) => {
-          console.log(err);
           localStorage.clear();
         });
     }
   }, [userDataJSON]);
 
   return (
-    <div className="app_container">
+    <>
       <ScrollToTop />
       <Header userData={userStorage?.client} />
 
@@ -75,7 +74,7 @@ function App() {
         </Route>
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 

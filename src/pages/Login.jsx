@@ -25,7 +25,6 @@ const Login = ({}) => {
 
       .catch((err) => {
         seterror(err.response.data);
-        console.log(err);
       });
   };
 
@@ -44,7 +43,7 @@ const Login = ({}) => {
               id="email"
               type="email"
               required
-              placeholder="email"
+              placeholder="Correo electronico"
             />
           </div>
 

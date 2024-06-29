@@ -5,6 +5,7 @@ import './pagesStyle/finalizePurchase.css';
 import FPDelivery from '../components/FinalizePurchase.jsx/FPDelivery';
 import FPDataClient from '../components/FinalizePurchase.jsx/FPDataClient';
 import FPChekout from '../components/FinalizePurchase.jsx/FPChekout';
+import axios from 'axios';
 
 const FinalizePurchase = ({ userData }) => {
   const cartData = useSelector((state) => state.cart);
@@ -16,16 +17,30 @@ const FinalizePurchase = ({ userData }) => {
   const [dataClient, setdataClient] = useState();
   const [dataPay, setDataPay] = useState({});
   const [showContent, setShowContent] = useState(false);
+  const [openingHoure, setOpeningHoure] = useState();
 
   useEffect(() => {
-    const now = new Date();
-    const startTime = new Date(now);
-    startTime.setHours(16, 30, 0, 0); // 4:30 PM
-    const endTime = new Date(now);
-    endTime.setHours(22, 30, 0, 0); // 10:30 PM
+    const url = `${import.meta.env.VITE_URL_API}/openingHours/1`;
 
-    setShowContent(now > startTime && now < endTime);
+    axios.get(url).then((res) => setOpeningHoure(res.data.openingHoure));
   }, []);
+
+  useEffect(() => {
+    if (openingHoure) {
+      const startTimeString = openingHoure?.startTime; // Tu string de inicio
+      const [hours, minutes] = startTimeString?.split(':').map(Number); // Separar las horas y minutos
+      const now = new Date(); // Crear un objeto Date para la fecha actual
+      const startTime = new Date(now); // Crear un nuevo objeto Date basado en la fecha actual
+      startTime.setHours(hours, minutes, 0, 0); // Establecer las horas y minutos
+
+      const endTimeString = openingHoure?.endTime; // Tu string de finalización
+      const [endHour, endMinute] = endTimeString?.split(':').map(Number); // Separar las horas y minutos
+      const endTime = new Date(now); // Crear un nuevo objeto Date basado en la fecha actual
+      endTime.setHours(endHour, endMinute, 0, 0); // Establecer las horas y minutos
+
+      setShowContent(now > startTime && now < endTime);
+    }
+  }, [openingHoure]);
 
   useEffect(() => {
     // Calcula la información detallada de cada producto

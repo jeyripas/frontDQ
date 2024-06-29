@@ -6,23 +6,33 @@ const DeliveryArea = () => {
   const [allDelivery, setallDelivery] = useState();
   const [selectLinkMap, setselectLinkMap] = useState();
 
+  const [maxWindow, setMaxWindow] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth > 800) {
+      setMaxWindow(true);
+    } else {
+      setMaxWindow(false);
+    }
+  }, []);
+
   useEffect(() => {
     const url = `${import.meta.env.VITE_URL_API}/delivery`;
 
-    axios
-      .get(url)
-      .then((res) => {
-        setallDelivery(res.data.deliveries);
-        setselectLinkMap(res.data.deliveries[0].linkMap);
-      })
-      .catch((err) => console.log(err));
+    axios.get(url).then((res) => {
+      setallDelivery(res.data.deliveries);
+      setselectLinkMap(res.data.deliveries[0].linkMap);
+    });
   }, []);
 
-  console.log(allDelivery);
   return (
     <div className="deliveryArea__container">
       <section className="deliveryArea__sectionOne">
-        <img src="./bg-reparto.jpg" alt="" />
+        {maxWindow ? (
+          <img src="./bgReparto.png" alt="fondo home Don Quezo" />
+        ) : (
+          <img src="./bgRepartoMobil.png" alt="fondo home Don Quezo" />
+        )}{' '}
         {/* <span></span> */}
         {/* <h1>Zonas de Reparto</h1>
         <p>

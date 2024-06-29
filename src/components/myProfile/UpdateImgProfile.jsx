@@ -22,16 +22,11 @@ const UpdateImgProfile = ({ userData, setopenUpdateImg, openUpdateImg }) => {
       formData.append('clientImg', selectedFile);
     }
 
-    axios
-      .patch(url, formData, config)
-      .then((res) => {
-        setopenUpdateImg(false);
-        setloading(false);
-        window.location.reload();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    axios.patch(url, formData, config).then((res) => {
+      setopenUpdateImg(false);
+      setloading(false);
+      window.location.reload();
+    });
 
     reset();
   };
